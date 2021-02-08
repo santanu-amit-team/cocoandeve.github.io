@@ -8592,7 +8592,7 @@ hr {
       display: none !important; }
     .section_slider_wrap .slick-prev,
     .section_slider_wrap .slick-next {
-      z-index: 9; }
+      z-index: 3; }
     .section_slider_wrap .slick-prev:before,
     .section_slider_wrap .slick-next:before {
       color: #333;
