@@ -1,0 +1,47 @@
+%btn {
+  width: auto;
+  display: inline-block;
+  font-size: 1.25rem;
+  font-weight: weight(bold);
+  padding: 0.75em 1.75em;
+  text-align: center;
+  box-shadow: none;
+  border: 2px solid currentColor;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  @include bd-radius(0.5rem);
+  width: 230px;
+  max-width: 100%;
+}
+%btn-border {
+  @extend %btn;
+  border: 2px solid color(primary);
+  color: color(primary);
+  background: color(white);
+
+  @include hover-focus-active {
+    @include set-background(color(primary));
+  }
+}
+%btn-dark {
+  @extend %btn;
+  @include set-background(color(dark));
+  text-decoration: none;
+}
+.btn-sm {
+  @extend %btn;
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  text-transform: uppercase;
+}
+.btn-primary {
+  @extend %btn;
+  @include set-background(color(primary));
+
+  @include hover-focus-active {
+    @include set-background(darken(color(primary), 10%));
+  }
+}
+.btn-border {
+  @extend %btn-border;
+}

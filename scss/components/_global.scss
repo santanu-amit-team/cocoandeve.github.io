@@ -1,0 +1,103 @@
+// Default styles
+.container {
+  width: 100%;
+  max-width: 100%;
+  @include padding(left, 0.938);
+  @include padding(right, 0.938);
+  @include m-auto();
+  box-sizing: border-box;
+  position: relative;
+  @include media(">=lg") {
+    width: 73.125rem;
+  }
+}
+.container-sm {
+  width: 100%;
+  max-width: 50rem;
+  @include m-auto();
+}
+.clearfix {
+  @include clearfix();
+}
+
+::selection {
+  @include set-background(color(primary));
+}
+
+.text-center {
+  @include text(center);
+}
+.text-right {
+  @include text(right);
+}
+
+.align-center {
+  @include align-center();
+}
+
+hr {
+  @include line();
+}
+
+.success {
+  color: color(success);
+}
+.danger {
+  color: color(error);
+}
+.warning {
+  color: color(warning);
+}
+.mark {
+  color: color(primary);
+}
+.underline {
+  text-decoration: underline;
+}
+.linethrough {
+  text-decoration: line-through;
+}
+
+.bg-dark {
+  @include set-background(color(bg));
+}
+.bg-light {
+  @include set-background(color(light));
+}
+.bg-white {
+  @include set-background(color(white));
+}
+.bg-primary-light {
+  @include set-background(color(primary-light));
+}
+.bg-secondary {
+  @include set-background(color(secondary));
+}
+.bg-light-shade1 {
+  @include set-background(color(clr-shade1-light));
+}
+.bg-light-shade2 {
+  @include set-background(color(clr-shade2-light));
+}
+
+/*.....scroll to top
+......................*/
+.scrollup {
+  @include set-background(color(bg));
+  padding: 0;
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: fixed;
+  bottom: 3rem;
+  right: 2rem;
+  padding: 0.25rem;
+  z-index: 2;
+  display: none;
+
+  i {
+    padding: 0;
+  }
+}

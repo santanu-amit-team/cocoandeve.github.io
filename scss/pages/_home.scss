@@ -1,0 +1,279 @@
+/*....hero section
+...........................*/
+.hero {
+  position: relative;
+
+  .slick-slider {
+    margin: 0;
+
+    .slick-slide {
+      padding: 0;
+    }
+
+    .slick-prev,
+    .slick-next {
+      display: none !important;
+    }
+    .slick-dots {
+      bottom: 5%;
+      right: 5%;
+      text-align: right;
+      li {
+        button:before {
+          font-size: 1.25rem;
+          color: color(light);
+          opacity: 1;
+        }
+        &.slick-active button::before {
+          opacity: 0.75;
+          color: color(primary);
+        }
+      }
+    }
+  }
+}
+
+/*....slider section
+...........................*/
+.section_slider {
+  padding: 2.5rem 0;
+
+  &_wrap {
+    @include margin(bottom, 2);
+
+    .slick-slider {
+      margin: 0;
+    }
+    .slick-dots {
+      display: none !important;
+    }
+    .slick-prev,
+    .slick-next {
+      z-index: 9;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+      color: color(accent);
+      font-size: 3rem;
+    }
+    .slick-next {
+      right: 0;
+    }
+  }
+}
+
+/*....discover section
+...........................*/
+.section_discover {
+  padding: 2.5rem 0;
+  text-align: center;
+
+  p {
+    font-size: 1rem;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    line-height: 1.4;
+  }
+
+  &_wrap {
+    @include margin(top, 3);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 2rem;
+    text-align: center;
+
+    .img_box {
+      position: relative;
+      @include margin(bottom, 1.5);
+      height: 380px;
+
+      img {
+        @include size(100%);
+        object-fit: cover;
+      }
+
+      .caption {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        @include size(100%);
+        padding: 2rem;
+        color: color(white);
+      }
+    }
+  }
+}
+
+/*....service section
+...........................*/
+.section_service {
+  padding: 2.5rem 0;
+
+  .service_box {
+    @include padding(bottom, 2.5);
+    @include margin(bottom, 2.5);
+    @include border(bottom, 1px, color(clr-shade1));
+
+    &_inner {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-gap: 2rem;
+      text-align: center;
+
+      @include media(">=sm") {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      svg {
+        @include margin(bottom, 0.5);
+      }
+      p {
+        font-size: 1rem;
+        font-size: clamp(1rem, 2vw, 1.25rem);
+        line-height: 1.3;
+      }
+    }
+    #icon {
+      .s1 {
+        fill: color(white);
+      }
+      .s2 {
+        fill: color(secondary);
+      }
+    }
+  }
+  p.review {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    color: color(accent-light);
+    @include media(">=sm") {
+      flex-direction: row;
+    }
+
+    span {
+      font-weight: weight(bold);
+      color: color(accent);
+    }
+
+    #star {
+      .st1 {
+        fill-rule: evenodd;
+        clip-rule: evenodd;
+        fill: color(white);
+      }
+      .st2 {
+        fill-rule: evenodd;
+        clip-rule: evenodd;
+        fill: color(clr-shade1);
+      }
+    }
+  }
+}
+
+/*....editor section
+...........................*/
+.section_editor {
+  padding: 2.5rem 0;
+  text-align: center;
+  @include media(">=sm") {
+    padding: 5rem 0;
+  }
+
+  .img_box {
+    @include margin(top, 3);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 0.5rem;
+    justify-content: space-between;
+    align-items: center;
+    @include media(">=sm") {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include media(">=lg") {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    img {
+      padding: 1rem;
+      width: 200px;
+    }
+  }
+}
+
+/*....real section
+...........................*/
+.section_real {
+  padding: 3.5rem 0 2.5rem;
+
+  h2 {
+    text-align: center;
+    @include margin(bottom, 0.75);
+  }
+}
+
+/*....get section
+...........................*/
+.section_get {
+  padding: 3rem 0 0.75rem;
+
+  p {
+    font-size: 1rem;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    line-height: 1.4;
+  }
+
+  &_wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 0.5rem;
+    padding: 0 0.938rem;
+    @include margin(top, 2.5);
+
+    @include media(">=sm") {
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 0.75rem;
+    }
+    @include media(">=md") {
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 0.75rem;
+    }
+    @include media(">=lg") {
+      grid-template-columns: repeat(5, 1fr);
+      grid-gap: 0.75rem;
+    }
+    @include media(">=xl") {
+      grid-template-columns: repeat(7, 1fr);
+      grid-gap: 0.75rem;
+    }
+
+    .big {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+
+    img {
+      @include size(100%);
+      object-fit: cover;
+    }
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.25),
+  only screen and (min--moz-device-pixel-ratio: 1.25),
+  only screen and (-o-min-device-pixel-ratio: 1.25/1),
+  only screen and (min-device-pixel-ratio: 1.25),
+  only screen and (min-resolution: 200dpi),
+  only screen and (min-resolution: 1.25dppx) {
+}

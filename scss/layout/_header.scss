@@ -1,0 +1,468 @@
+.top_header {
+  padding: 0.375rem 0;
+  text-align: center;
+  a {
+    font-weight: weight(bold);
+    @include hover {
+      text-decoration: underline;
+    }
+  }
+}
+/*....header section
+...........................*/
+.header {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+
+  .header_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0.938rem;
+
+    & > * {
+      flex: 1 1 100%;
+    }
+
+    .logo {
+      transition: ease 0.5s;
+      text-align: center;
+
+      svg {
+        width: 105px;
+      }
+    }
+
+    .menu {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+
+      @include media(">=lg") {
+        flex-direction: row;
+        align-items: center;
+
+        li + li {
+          @include padding(left, 1.25);
+        }
+      }
+
+      .menu-item {
+        display: block;
+        margin: 0;
+        width: 100%;
+
+        @include media(">=lg") {
+          // position: relative;
+          width: auto;
+        }
+
+        &:hover a {
+          color: color(primary);
+        }
+
+        a {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          color: color(light);
+          font-weight: weight(bold);
+          text-transform: uppercase;
+          padding: 0.5rem 0.938rem;
+          @include border(bottom, 1px, color(border-dark));
+          transition: all 0.3s ease;
+
+          @include media(">=lg") {
+            padding: 0.5rem 0;
+            border: 0;
+            color: color(accent);
+          }
+          i {
+            @include padding(left, 0.5);
+            color: color(primary);
+          }
+        }
+
+        .sub-menu {
+          width: 100%;
+          position: relative;
+          opacity: 1;
+          visibility: visible;
+          border: none;
+          background-color: transparent;
+          box-shadow: none;
+          transform: translateY(0px);
+          padding: 0;
+          margin: 0;
+          left: auto;
+          top: auto;
+          max-height: 0;
+          overflow: hidden;
+          transition: all 0.3s ease;
+
+          @include media(">=lg") {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            // width: 220px;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            @include set-background(color(light));
+            padding: 0.5rem 0;
+            @include border(top, 0.25rem, color(primary));
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            max-height: min-content;
+            overflow: inherit;
+          }
+
+          .menu-item {
+            &:hover a {
+              color: color(primary);
+            }
+            @include media(">=lg") {
+              display: block;
+              padding: 0;
+              width: 100%;
+            }
+            a {
+              padding: 0.75rem 2rem;
+              color: color(light);
+
+              @include media(">=lg") {
+                display: block;
+                padding: 0.625rem 0.938rem;
+                font-weight: weight(smbold);
+                color: color(accent);
+                transition: all 0.3s ease;
+                text-transform: capitalize;
+                border: 0;
+              }
+            }
+          }
+
+          .sub-menu_wrap {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            grid-gap: 2rem;
+            @include media(">=lg") {
+              grid-template-columns: repeat(4, 1fr);
+            }
+
+            .menu-item {
+              &:first-child {
+                a {
+                  font-size: 2rem;
+                  text-decoration: underline;
+                }
+              }
+              a {
+                padding: 0.5rem 0.938rem !important;
+              }
+            }
+          }
+        }
+      }
+      @include media(">=lg") {
+        .menu-item-has-children {
+          &:hover .sub-menu {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+    }
+
+    .open-nav-menu {
+      @include size(2.5rem);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      span {
+        display: block;
+        height: 0.188rem;
+        width: 1.5rem;
+        background-color: color(secondary);
+        position: relative;
+
+        &:before,
+        &:after {
+          content: "";
+          position: absolute;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: color(secondary);
+          box-sizing: border-box;
+        }
+        &:before {
+          top: -0.438rem;
+        }
+        &:after {
+          top: 0.438rem;
+        }
+      }
+    }
+
+    .close-nav-menu {
+      @include size(2.5rem);
+      font-size: 1.5rem;
+      @include set-background(color(light));
+      margin: 0 0 1rem 1rem;
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .menu-overlay {
+      position: fixed;
+      z-index: 999;
+      background-color: rgba(0, 0, 0, 0.5);
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+
+    @include media("<lg") {
+      .close-nav-menu,
+      .open-nav-menu {
+        display: flex;
+      }
+      .menu-overlay.active {
+        visibility: visible;
+        opacity: 1;
+      }
+      .nav-menu {
+        position: fixed;
+        left: -280px;
+        visibility: hidden;
+        width: 280px;
+        height: 100%;
+        top: 0;
+        overflow-y: auto;
+        @include set-background(color(bg-dark));
+        z-index: 1000;
+        padding: 0.938rem 0;
+        transition: all 0.5s ease;
+
+        &.open {
+          visibility: visible;
+          left: 0px;
+        }
+      }
+
+      .menu-item {
+        &:first-child > a {
+          @include border(top, 1px, color(border-dark));
+        }
+      }
+    }
+
+    .header_menu_right {
+      .menu {
+        justify-content: flex-end;
+        align-items: flex-end;
+        .menu-item {
+          width: auto;
+          span {
+            @include padding(left, 0.25);
+            .mark {
+              color: color(accent);
+            }
+          }
+        }
+
+        @include media("<lg") {
+          .menu-item {
+            &:first-child {
+              display: none;
+            }
+            a {
+              border: 0;
+              color: color(accent);
+              span.mark {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.sticky {
+  position: relative;
+  top: 0;
+  width: 100%;
+  @include set-background(color(dark));
+  transition: ease 0.5s;
+  z-index: 9;
+  padding: 0.5rem 0 !important;
+
+  .logo {
+    max-width: 120px !important;
+    transition: ease 0.5s;
+  }
+}
+
+// sidebar
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  right: 0;
+  @include set-background(lighten(color(white), 10%));
+  overflow-x: hidden;
+  transition: 0.5s;
+
+  .side_box {
+    padding: 1.25rem;
+
+    h3 {
+      @include margin(bottom, 0.5);
+      @include padding(bottom, 0.5);
+      @include border(bottom, 1px, color(border));
+    }
+    ul {
+      @include padding(bottom, 0.75);
+      @include border(bottom, 1px, color(border));
+
+      li + li {
+        @include margin(top, 0.75);
+        @include padding(top, 0.75);
+        @include border(top, 1px, color(border));
+      }
+      .cart_table {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: auto;
+        justify-content: space-between;
+        align-items: flex-start;
+        grid-gap: 0.75rem;
+
+        .span2 {
+          grid-column: span 2;
+        }
+
+        & > * {
+          @include size(100%);
+        }
+
+        img {
+          @include size(100%);
+          object-fit: cover;
+        }
+
+        #field {
+          border: 1px solid color(border);
+          display: grid;
+          grid-template-columns: 1fr 3fr 1fr;
+          grid-template-rows: auto;
+          justify-content: space-between;
+          align-items: center;
+          grid-gap: 0.25rem;
+          padding: 0.25rem 0;
+          @include margin(top, 1.5);
+          @include bd-radius(0.25rem);
+
+          input {
+            text-align: center;
+            padding: 0.5rem;
+            border: 0;
+          }
+          button {
+            border: 0;
+            background: transparent;
+          }
+        }
+      }
+    }
+
+    .subtotal_box {
+      margin: 1rem 0;
+      @include padding(bottom, 1);
+      @include content-gap();
+      @include border(bottom, 1px, color(border));
+
+      .sub {
+        font-weight: weight(bold);
+        span {
+          float: right;
+        }
+      }
+      .total {
+        @include border(top, 1px, color(border));
+        @include padding(top, 1);
+        font-size: 1.5rem;
+      }
+
+      .form_row {
+        background: color(white);
+        @include bd-radius(0.25rem);
+        grid-gap: 0.5rem 0;
+
+        .form-group {
+          height: 100%;
+
+          .form-control {
+            @include media(">=sm") {
+              @include size(100%);
+            }
+          }
+
+          .btn-primary {
+            width: 100%;
+            border-color: color(primary);
+            @include bd-radius(0);
+            border-top-right-radius: 0.25rem;
+            border-bottom-right-radius: 0.25rem;
+
+            @include hover-focus-active {
+              @include set-background(darken(color(primary), 10%));
+              border-color: darken(color(primary), 10%);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .sidebar_btn {
+    padding: 1.25rem;
+    box-shadow: 0 -5px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  .closebtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include set-background(color(primary));
+    padding: 0;
+    width: 3.75rem;
+    height: 3.75rem;
+    text-align: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}

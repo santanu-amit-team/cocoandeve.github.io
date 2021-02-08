@@ -1,0 +1,117 @@
+// Color theme
+
+$primary: #f4436c !default;
+$primary-light: #f5dadf !default;
+$secondary: #00635b !default;
+$secondary-light: #1a736a !default;
+
+$success: #28a745 !default;
+$error: #dc3545 !default;
+$warning: #ffc107 !default;
+$info: #17a2b8 !default;
+$light: #f8f9fa !default;
+$dark: #141415 !default;
+$muted: #6c757d !default;
+$white: #fff !default;
+$black: #000 !default;
+
+$accent: #333 !default;
+$accent-light: #9c9c9c !default;
+$border: #e1e1e1 !default;
+$border-light: #dee2e6 !default;
+$border-dark: #333 !default;
+
+// Links
+$link-color: $secondary !default;
+$link-hover-color: $primary !default;
+
+//background
+$bg: #161610 !default;
+$bg-light: #ebebeb !default;
+$bg-dark: #222222 !default;
+
+//shade color
+$clr-shade1: #00b67a !default;
+$clr-shade1-light: #e0f0e9 !default;
+$clr-shade2: #f9eeca !default;
+$clr-shade2-light: #f9eeca !default;
+
+//user changes theme colors:
+$color: (
+  primary: $primary,
+  primary-light: $primary-light,
+  secondary: $secondary,
+  secondary-light: $secondary-light,
+  success: $success,
+  error: $error,
+  warning: $warning,
+  info: $info,
+  light: $light,
+  dark: $dark,
+  muted: $muted,
+  white: $white,
+  black: $black,
+  accent: $accent,
+  accent-light: $accent-light,
+  link: $link-color,
+  link-hover: $link-hover-color,
+  border: $border,
+  border-light: $border-light,
+  border-dark: $border-dark,
+  bg: $bg,
+  bg-light: $bg-light,
+  bg-dark: $bg-dark,
+  clr-shade1: $clr-shade1,
+  clr-shade1-light: $clr-shade1-light,
+  clr-shade2: $clr-shade2,
+  clr-shade2-light: $clr-shade2-light,
+) !default;
+
+// font-family
+
+$ff-base: "sofia_proregular";
+$ff-heading: "sofia_proregular";
+
+// Typography
+
+$spacer: 5rem;
+$fs-base: 1rem !default; // Assumes the browser default, typically `16px`
+
+$lh-base: 1.6 !default;
+$lh-heading: 1.2 !default;
+
+$h1: $fs-base * 2.5 !default;
+$h2: $fs-base * 2 !default;
+$h3: $fs-base * 1.75 !default;
+$h4: $fs-base * 1.5 !default;
+$h5: $fs-base * 1.25 !default;
+$h6: $fs-base !default;
+$fs-sm: $fs-base * 0.875 !default;
+$fs-xs: $fs-base * 0.75 !default;
+
+// font-weight
+$weight: (
+  thin: 100,
+  exlight: 200,
+  light: 300,
+  regular: 400,
+  medium: 500,
+  smbold: 600,
+  bold: 700,
+  exbold: 800,
+  black: 900,
+);
+
+// This variable affects the `.h-*` and `.w-*` classes.
+$sizes: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$sizes: map-merge(
+  (
+    25: 25%,
+    50: 50%,
+    75: 75%,
+    100: 100%,
+    auto: auto,
+  ),
+  $sizes
+);
