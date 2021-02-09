@@ -6,7 +6,6 @@
   @include padding(right, 0.938);
   @include m-auto();
   box-sizing: border-box;
-  position: relative;
   @include media(">=lg") {
     width: 73.125rem;
   }

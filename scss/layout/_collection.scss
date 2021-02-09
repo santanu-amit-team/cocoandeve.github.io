@@ -1,0 +1,8 @@
+.prod_collection {
+  &_wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 2rem;
+  }
+}

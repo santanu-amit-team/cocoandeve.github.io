@@ -1,13 +1,12 @@
 /*....footer section
 ...........................*/
 .section_footer {
-  padding: 2.5rem 0;
-
   &_wrap {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     grid-gap: 1rem;
+    padding: 2.5rem 0;
 
     .span2 {
       grid-column: span 2;
@@ -48,14 +47,16 @@
         @include bd-radius(0.25rem);
         grid-gap: 0.5rem 0;
 
+        &.col3 {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
         .form-group {
           height: 100%;
 
           .form-control {
             border: 0;
-            @include media(">=sm") {
-              @include size(100%);
-            }
+            @include size(100%);
           }
 
           .btn-primary {
@@ -96,7 +97,23 @@
         border: 0 !important;
         color: color(white) !important;
         font-size: 1.5rem !important;
+        background: bg("caret-down.svg") no-repeat 95% !important;
+        background-size: 1rem !important;
+
+        option {
+          color: color(accent);
+        }
       }
+    }
+  }
+
+  .copyright_wrap {
+    padding: 0.625rem 0;
+    @include border(top, 1px, color(white));
+    text-align: center;
+
+    p {
+      font-size: 1rem;
     }
   }
 }

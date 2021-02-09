@@ -69,7 +69,7 @@ $('.center').slick({
     {
       breakpoint: 1200,
       settings: {
-        arrows: false,
+        arrows: true,
         centerMode: true,
         centerPadding: '30px',
         slidesToShow: 3
@@ -78,7 +78,7 @@ $('.center').slick({
     {
       breakpoint: 992,
       settings: {
-        arrows: false,
+        arrows: true,
         centerMode: true,
         centerPadding: '60px',
         slidesToShow: 2
@@ -87,18 +87,18 @@ $('.center').slick({
     {
       breakpoint: 768,
       settings: {
-        arrows: false,
+        arrows: true,
         centerMode: true,
-        centerPadding: '0',
+        centerPadding: '30px',
         slidesToShow: 2
       }
     },
     {
       breakpoint: 576,
       settings: {
-        arrows: false,
+        arrows: true,
         centerMode: true,
-        centerPadding: '0',
+        centerPadding: '30px',
         slidesToShow: 1
       }
     }
@@ -115,7 +115,7 @@ $('.center2').slick({
     {
       breakpoint: 1200,
       settings: {
-        arrows: false,
+        arrows: true,
         centerMode: true,
         centerPadding: '30px',
         slidesToShow: 3
@@ -124,7 +124,7 @@ $('.center2').slick({
     {
       breakpoint: 992,
       settings: {
-        arrows: false,
+        arrows: true,
         centerMode: true,
         centerPadding: '60px',
         slidesToShow: 2
@@ -133,18 +133,18 @@ $('.center2').slick({
     {
       breakpoint: 768,
       settings: {
-        arrows: false,
+        arrows: true,
         centerMode: true,
-        centerPadding: '0',
+        centerPadding: '30px',
         slidesToShow: 2
       }
     },
     {
       breakpoint: 576,
       settings: {
-        arrows: false,
+        arrows: true,
         centerMode: true,
-        centerPadding: '0',
+        centerPadding: '30px',
         slidesToShow: 1
       }
     }
