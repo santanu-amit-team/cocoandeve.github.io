@@ -7391,7 +7391,7 @@ p {
   padding: 0.75em 1em;
   text-align: center;
   box-shadow: none;
-  border: 2px solid currentColor;
+  border: 2px solid transparent;
   text-decoration: none;
   letter-spacing: 0.5px;
   -webkit-border-radius: 0.5rem;
@@ -7950,7 +7950,8 @@ hr {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 9; }
+  z-index: 9;
+  transition: 0.5s; }
   .header .header_wrap {
     display: flex;
     justify-content: space-between;
@@ -8473,7 +8474,8 @@ hr {
 .prod_list .img_box {
   position: relative; }
   .prod_list .img_box img {
-    margin: 0 auto; }
+    margin: 0 auto;
+    width: 100%; }
   .prod_list .img_box .new {
     position: absolute;
     right: 0.25rem;
@@ -8492,7 +8494,7 @@ hr {
     place-items: center; }
 
 .prod_list .content_box {
-  padding: 1.25rem;
+  padding: 1.25rem 1rem;
   text-align: center;
   position: relative; }
   .prod_list .content_box > * + * {
@@ -8504,7 +8506,7 @@ hr {
     font-size: clamp(1.25rem, 2vw, 1.5rem);
     line-height: 1.4; }
     .prod_list .content_box p span {
-      padding: 0 1rem;
+      padding: 0 0.5rem;
       font-weight: 700; }
   .prod_list .content_box .hide_box {
     display: none;
@@ -8566,11 +8568,118 @@ hr {
   .prod_list .content_box .btn:hover + .hide_box {
     display: flex; }
 
-.prod_collection_wrap {
+@media (max-width: 767px) {
+  .hero_collection .container {
+    padding: 0; } }
+
+.hero_collection .hero_hair_collection {
+  background: url("../images/hair_banner.png") no-repeat;
+  background-position: center;
+  background-size: cover; }
+  @media (min-width: 768px) {
+    .hero_collection .hero_hair_collection {
+      background-position: right center;
+      background-size: 65%; } }
+
+.hero_collection_wrap {
+  padding: 10rem 0.938em 0; }
+  @media (min-width: 768px) {
+    .hero_collection_wrap {
+      padding: 4rem 0; } }
+  .hero_collection_wrap .hero_content {
+    background-color: #fff;
+    color: #333;
+    padding: 1.25rem;
+    width: 100%; }
+    .hero_collection_wrap .hero_content > * + * {
+      margin-top: 1em; }
+    @media (min-width: 768px) {
+      .hero_collection_wrap .hero_content {
+        padding: 2rem 2rem 2rem 0;
+        width: 45%; } }
+    .hero_collection_wrap .hero_content h1 {
+      font-size: 4rem;
+      font-size: clamp(2.5rem, 5vw, 4.5rem); }
+    .hero_collection_wrap .hero_content p {
+      font-size: 1rem;
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      line-height: 1.4; }
+
+.prod_collection {
+  padding: 4rem 0; }
+  .prod_collection .title {
+    padding-bottom: 0.5em;
+    margin-bottom: 0.75em;
+    border-bottom: 1px #e1e1e1 solid; }
+  .prod_collection_wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 2rem; }
+
+.collection_video {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: 1fr;
   grid-template-rows: auto;
-  grid-gap: 2rem; }
+  grid-gap: 0; }
+  @media (min-width: 768px) {
+    .collection_video {
+      grid-template-columns: 45% 55%; }
+      .collection_video .content {
+        grid-area: 1 / 1 / 2 / 2; } }
+  .collection_video .content {
+    padding: 1.5rem 0.938em;
+    display: grid;
+    place-items: center; }
+    @media (min-width: 1200px) {
+      .collection_video .content {
+        padding: 3rem;
+        padding-left: calc((100vw - 1170px) / 2); } }
+  .collection_video .video {
+    background: url("../images/hair_video-bg.jpg") no-repeat center left;
+    background-size: cover;
+    padding: 2rem 0.938em;
+    height: 300px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end; }
+    @media (min-width: 768px) {
+      .collection_video .video {
+        padding: 3rem;
+        height: 500px; } }
+    .collection_video .video a {
+      color: #fff;
+      font-size: 3rem;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700; }
+      .collection_video .video a i {
+        font-size: 4rem;
+        font-size: clamp(3rem, 5vw, 5.5rem);
+        vertical-align: top;
+        padding-right: 0.25em; }
+
+.collection_img_text {
+  background: url("../images/hair_back_img.jpg") no-repeat center;
+  background-size: cover;
+  height: 560px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-top: 4.5em;
+  padding: 0 0.938em; }
+  @media (min-width: 768px) {
+    .collection_img_text {
+      padding: 0;
+      align-items: center; } }
+  .collection_img_text .content {
+    background-color: #00635b;
+    color: #f8f9fa;
+    padding: 1.5rem 0.938em;
+    width: 100%; }
+    @media (min-width: 768px) {
+      .collection_img_text .content {
+        width: 50%;
+        padding: 1.5rem 4.5rem; } }
 
 /*....footer section
 ...........................*/

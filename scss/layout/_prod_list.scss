@@ -3,6 +3,7 @@
     position: relative;
     img {
       @include m-auto();
+      width: 100%;
     }
     .new {
       position: absolute;
@@ -18,7 +19,7 @@
     }
   }
   .content_box {
-    padding: 1.25rem;
+    padding: 1.25rem 1rem;
     text-align: center;
     position: relative;
     @include content-gap(0.25);
@@ -31,7 +32,7 @@
       line-height: 1.4;
 
       span {
-        padding: 0 1rem;
+        padding: 0 0.5rem;
         font-weight: weight(bold);
       }
     }
