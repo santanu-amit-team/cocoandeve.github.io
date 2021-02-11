@@ -9,7 +9,7 @@
   mediaSize = 991;
 
   openNavMenu.addEventListener("click", toggleNav);
-  closeNavMenu.addEventListener("click", toggleNav);
+  //closeNavMenu.addEventListener("click", toggleNav);
   // close the navMenu by clicking outside
   menuOverlay.addEventListener("click", toggleNav);
 
@@ -19,28 +19,36 @@
   	document.body.classList.toggle("hidden-scrolling");
   }
 
-  navMenu.addEventListener("click", (event) =>{
-      if(event.target.hasAttribute("data-toggle") && 
-      	window.innerWidth <= mediaSize){
-      	// prevent default anchor click behavior
-      	event.preventDefault();
-      	const menuItemHasChildren = event.target.parentElement;
-        // if menuItemHasChildren is already expanded, collapse it
-        if(menuItemHasChildren.classList.contains("active")){
-        	collapseSubMenu();
-        }
-        else{
-          // collapse existing expanded menuItemHasChildren
-          if(navMenu.querySelector(".menu-item-has-children.active")){
-        	collapseSubMenu();
-          }
-          // expand new menuItemHasChildren
-          menuItemHasChildren.classList.add("active");
-          const subMenu = menuItemHasChildren.querySelector(".sub-menu");
-          subMenu.style.maxHeight = subMenu.scrollHeight + "px";
-        }
-      }
+  // navMenu.addEventListener("click", (event) =>{
+  //     if(event.target.hasAttribute("data-toggle")  && 
+  //     	window.innerWidth <= mediaSize){
+  //     	// prevent default anchor click behavior
+  //     	event.preventDefault();
+  //     	const menuItemHasChildren = event.target.parentElement;
+  //       // if menuItemHasChildren is already expanded, collapse it
+  //       if(menuItemHasChildren.classList.contains("active")){
+  //       	collapseSubMenu();
+  //       }
+  //       else{
+  //         // collapse existing expanded menuItemHasChildren
+  //         if(navMenu.querySelector(".menu-item-has-children.active")){
+  //       	collapseSubMenu();
+  //         }
+  //         // expand new menuItemHasChildren
+  //         menuItemHasChildren.classList.add("active");
+  //         const subMenu = menuItemHasChildren.querySelector(".sub-menu");
+  //         subMenu.style.maxHeight = subMenu.scrollHeight + "px";
+  //       }
+  //     }
+  // });
+
+
+  $(document).on("click",".menu-item-has-children",function(event){
+    $(this).toggleClass('active');
+    $('.menu-item-has-children').find('.sub-menu').css('maxHeight','');
+    $(this).find('.sub-menu').css('maxHeight',$(this).find('.sub-menu')[0].scrollHeight+'px');
   });
+
   function collapseSubMenu(){
   	navMenu.querySelector(".menu-item-has-children.active .sub-menu")
   	.removeAttribute("style");
