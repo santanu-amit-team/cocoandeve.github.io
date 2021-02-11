@@ -7,7 +7,7 @@
   }
   .hero_hair_collection {
     background: bg("hair_banner.png") no-repeat;
-    background-position: center;
+    background-position: center -1.875rem;
     background-size: cover;
     @include media(">=md") {
       background-position: right center;
@@ -17,6 +17,10 @@
   &_wrap {
     padding: 10rem 0.938em 0;
 
+    @include media(">=sm") {
+      padding: 15rem 0.938em 0;
+    }
+
     @include media(">=md") {
       padding: 4rem 0;
     }
@@ -24,7 +28,7 @@
     .hero_content {
       @include set-background(color(white));
       @include content-gap();
-      padding: 1.25rem 1.25rem 0;
+      padding: 0.938rem 1.25rem;
       width: 100%;
       @include media(">=md") {
         padding: 2rem 2rem 2rem 0;

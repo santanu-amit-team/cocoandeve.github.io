@@ -7258,7 +7258,7 @@ body {
   line-height: 1.6;
   text-align: left;
   background-color: #fff;
-  color: #333; }
+  color: #000; }
 
 h1,
 h2,
@@ -7524,7 +7524,7 @@ p {
       font-weight: 400;
       line-height: 1.5;
       background-color: #fff;
-      color: #333;
+      color: #000;
       background-clip: padding-box;
       border: 1px solid #e1e1e1;
       -webkit-border-radius: 0.25rem;
@@ -7548,7 +7548,7 @@ p {
       padding: 0.375rem 0.75rem;
       border: 1px solid #e1e1e1;
       background-color: #f8f9fa;
-      color: #333;
+      color: #000;
       -webkit-border-radius: 2px;
       -moz-border-radius: 2px;
       -o-border-radius: 2px;
@@ -7691,7 +7691,7 @@ p {
   width: 100%;
   max-width: 100%;
   background-color: #fff;
-  color: #333;
+  color: #000;
   font-size: 0.875rem;
   line-height: 1.4;
   font-weight: 500;
@@ -7717,17 +7717,17 @@ p {
     vertical-align: middle;
     border-bottom: 2px solid #e1e1e1;
     background-color: #fcd4dd;
-    color: #333; }
+    color: #000; }
   .table tbody + tbody {
     border-top: 2px solid #e1e1e1; }
 
 .table-striped tbody tr:nth-of-type(odd) {
   background-color: #fafafa;
-  color: #333; }
+  color: #000; }
 
 .table-hover tbody tr:hover {
   background-color: #ededed;
-  color: #333; }
+  color: #000; }
 
 .table-responsive {
   display: block;
@@ -7902,15 +7902,15 @@ hr {
 
 .bg-light {
   background-color: #f8f9fa;
-  color: #333; }
+  color: #000; }
 
 .bg-white {
   background-color: #fff;
-  color: #333; }
+  color: #000; }
 
 .bg-primary-light {
   background-color: #f5dadf;
-  color: #333; }
+  color: #000; }
 
 .bg-secondary {
   background-color: #00635b;
@@ -7918,17 +7918,17 @@ hr {
 
 .bg-light-shade1 {
   background-color: #e0f0e9;
-  color: #333; }
+  color: #000; }
 
 .bg-light-shade2 {
   background-color: #f9eeca;
-  color: #333; }
+  color: #000; }
 
 /*.....scroll to top
 ......................*/
 .scrollup {
   background-color: #fff;
-  color: #333;
+  color: #000;
   color: #f4436c;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -8085,7 +8085,7 @@ hr {
               left: 0;
               top: 100%;
               background-color: #fff;
-              color: #333;
+              color: #000;
               padding: 0.5rem 0;
               transform: translateY(10px);
               transition: all 0.3s ease;
@@ -8225,7 +8225,7 @@ hr {
         top: 0;
         overflow-y: auto;
         background-color: #fff;
-        color: #333;
+        color: #000;
         z-index: 1000;
         padding: 0.938rem 0;
         transition: all 0.5s ease; }
@@ -8271,7 +8271,7 @@ hr {
   top: 0;
   right: 0;
   background-color: white;
-  color: #333;
+  color: #000;
   overflow-x: hidden;
   transition: 0.5s; }
   .sidebar .sidebar_wrap {
@@ -8418,7 +8418,7 @@ hr {
     padding: 1.25rem;
     box-shadow: 0 -5px 12px rgba(0, 0, 0, 0.08);
     background-color: #fff;
-    color: #333;
+    color: #000;
     position: fixed;
     bottom: 0; }
   .sidebar .closebtn {
@@ -8530,7 +8530,7 @@ hr {
   .slick-slide .content_box2 {
     padding: 1.25rem 1rem 3rem;
     background-color: #fff;
-    color: #333; }
+    color: #000; }
     .slick-slide .content_box2 > * + * {
       margin-top: 1em; }
     .slick-slide .content_box2 .star i {
@@ -8673,7 +8673,7 @@ hr {
 
 .hero_collection .hero_hair_collection {
   background: url("../images/hair_banner.png") no-repeat;
-  background-position: center;
+  background-position: center -1.875rem;
   background-size: cover; }
   @media (min-width: 768px) {
     .hero_collection .hero_hair_collection {
@@ -8682,13 +8682,16 @@ hr {
 
 .hero_collection_wrap {
   padding: 10rem 0.938em 0; }
+  @media (min-width: 576px) {
+    .hero_collection_wrap {
+      padding: 15rem 0.938em 0; } }
   @media (min-width: 768px) {
     .hero_collection_wrap {
       padding: 4rem 0; } }
   .hero_collection_wrap .hero_content {
     background-color: #fff;
-    color: #333;
-    padding: 1.25rem 1.25rem 0;
+    color: #000;
+    padding: 0.938rem 1.25rem;
     width: 100%; }
     .hero_collection_wrap .hero_content > * + * {
       margin-top: 1em; }
@@ -8940,14 +8943,14 @@ hr {
         border: 0; }
       .section_description .tab_list ul li {
         background-color: white;
-        color: #333;
+        color: #000;
         border: 0; }
         @media (min-width: 576px) {
           .section_description .tab_list ul li {
             padding: 0.5rem 1rem; } }
         .section_description .tab_list ul li.current {
           background-color: white;
-          color: #333;
+          color: #000;
           color: #f4436c;
           border-bottom: 3px #000 solid; }
   .section_description .grid_box {
