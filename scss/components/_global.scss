@@ -82,18 +82,26 @@ hr {
 /*.....scroll to top
 ......................*/
 .scrollup {
-  @include set-background(color(bg));
+  @include set-background(color(white));
+  color: color(primary);
+  @include bd-radius(50%);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
   padding: 0;
   width: 3rem;
   height: 3rem;
   text-align: center;
   font-size: 1.5rem;
+  text-align: center;
   cursor: pointer;
   position: fixed;
   bottom: 3rem;
   right: 2rem;
-  padding: 0.25rem;
+  padding: 1rem 0;
   z-index: 2;
+  background-image: bg("topArrow.png");
+  background-size: 20px 12px;
+  background-repeat: no-repeat;
+  background-position: center;
   display: none;
 
   i {

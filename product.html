@@ -25,6 +25,7 @@
     <!--preloader start-->
     <div id="preloader"><div id="loader"></div></div>
 
+    
     <!--top-header section-->
     <section class="top_header bg-primary-light">
       <div class="container">
@@ -41,14 +42,15 @@
         <div class="header_menu_left">
           <div class="open-nav-menu">
             <span></span>
-          </div>
-          <div class="menu-overlay"></div>
-          <!-- navigation menu start -->
-          <nav class="nav-menu">
+          </div>         
+          <div class="menu-overlay">
             <div class="close-nav-menu">
               <i class="fas fa-times"></i>
             </div>
-
+          </div>
+          <!-- navigation menu start -->
+          <nav class="nav-menu">
+            
             <!--menu mob-->
             <ul class="menu menu-mob">
               <li class="menu-item">
@@ -57,7 +59,7 @@
                 </a>
               </li>
               <li class="menu-item menu-item-has-children">
-                <a href="#" data-toggle="sub-menu" class="list_menu">
+                <a href="collections.html" data-toggle="sub-menu" class="list_menu">
                   <img src="images/megamenu-hair-scrub.jpg" alt="megamenu-hair-scrub" class="sub-menu-img">
                   <span class="right">
                     <span style="color: #00635b;"><small>Haircare</small><br> Like a Virgin</span> <i class="fas fa-angle-down"></i>
@@ -74,7 +76,7 @@
                 </ul>
               </li>
               <li class="menu-item menu-item-has-children">
-                <a href="#" data-toggle="sub-menu" class="list_menu">
+                <a href="collections.html" data-toggle="sub-menu" class="list_menu">
                   <img src="images/megamenu-tan.jpg" alt="megamenu-tan.jpg" class="sub-menu-img">
                   <span class="right">
                     <span style="color: #ae2573;"><small>Self Tanner</small><br> Sunny Honey</span> <i class="fas fa-angle-down"></i>
@@ -91,7 +93,7 @@
                 </ul>
               </li>    
               <li class="menu-item menu-item-has-children">
-                <a href="#" data-toggle="sub-menu" class="list_menu">
+                <a href="collections.html" data-toggle="sub-menu" class="list_menu">
                   <img src="images/Nav_Body.jpg" alt="Nav_Body" class="sub-menu-img">
                   <span class="right">
                     <span style="color: #213e7b;"><small>Bodycare</small><br> Glow Figure</span> <i class="fas fa-angle-down"></i>
@@ -108,7 +110,7 @@
                 </ul>
               </li>
               <li class="menu-item menu-item-has-children">
-                <a href="#" data-toggle="sub-menu" class="list_menu">
+                <a href="collections.html" data-toggle="sub-menu" class="list_menu">
                   <img src="images/Nav_ShopAll.jpg" alt="Nav_ShopAll" class="sub-menu-img">
                   <span class="right">
                     <span><small>Bundles</small><br> Value Kits</span> <i class="fas fa-angle-down"></i>
@@ -188,7 +190,7 @@
                 <ul class="sub-menu">
                   <div class="sub-menu_wrap">
                     <ul class="list list1">
-                      <li class="menu-item"><a href="#">hair</a></li>
+                      <li class="menu-item"><a href="collections.html">hair</a></li>
                       <li class="menu-item"><a href="#">Nourishing Hair Masque</a></li>
                       <li class="menu-item"><a href="#">Deep Clean Scalp Scrub</a></li>
                       <li class="menu-item"><a href="#">Healthy Hair Bundle</a></li>
@@ -198,7 +200,7 @@
                       <li class="menu-item"><a href="#"><img src="images/megamenu-hair-scrub.jpg" alt="megamenu-hair-scrub"></a></li>
                     </ul>
                     <ul class="list list2">
-                      <li class="menu-item"><a href="#">Tan</a></li>
+                      <li class="menu-item"><a href="collections.html">Tan</a></li>
                       <li class="menu-item"><a href="#">Bali Bronzing Bundle</a></li>
                       <li class="menu-item"><a href="#">Bali Bronzing Foam</a></li>
                       <li class="menu-item"><a href="#">Tanning Goddess Kit</a></li>
@@ -208,7 +210,7 @@
                       <li class="menu-item"><a href="#"><img src="images/megamenu-tan.jpg" alt="megamenu-hair-scrub"></a></li>
                     </ul>                     
                     <ul class="list list3">
-                      <li class="menu-item"><a href="#">Body</a></li>
+                      <li class="menu-item"><a href="collections.html">Body</a></li>
                       <li class="menu-item"><a href="#">Bali Bod Bundle</a></li>
                       <li class="menu-item"><a href="#">Bali Buffing Sugar</a></li>
                       <li class="menu-item"><a href="#">Bounce Body Masque</a></li>
@@ -218,7 +220,7 @@
                       <li class="menu-item"><a href="#"><img src="images/Nav_Body.jpg" alt="megamenu-hair-scrub"></a></li>
                     </ul>
                     <ul class="list list4">
-                      <li class="menu-item"><a href="#">Bundles</a></li>
+                      <li class="menu-item"><a href="collections.html">Bundles</a></li>
                       <li class="menu-item"><a href="#">Healthy Hair Bundle</a></li>
                       <li class="menu-item"><a href="#">That's A Wrap Bundle</a></li>
                       <li class="menu-item"><a href="#">Bali Bod Bundle</a></li>
@@ -264,76 +266,350 @@
             </li>
           </ul>
         </div>
-  
+        
+        <!--sidebar-->
         <div id="mysidebar" class="sidebar">
           <a href="javascript:void(0)" class="closebtn" onclick="closebtn()"><i class="fas fa-times"></i></a>
-          <div class="side_box">
-            <h3>Your Cart</h3>
-            <ul>
-              <li class="cart_table">
-                <div class="span2">
-                  <img src="images/Nav_Body.jpg" alt="Nav_Body">
-                </div>
-                <div class="span2">
-                  <p>Bali Bod Bundle</p>
-                  <div id="field">
-                    <button type="button" id="sub" class="sub">
-                      <i class="fas fa-minus"></i>
-                    </button>                    
-                    <input type="number" id="count" value="1" min="1" max="3">
-                    <button type="button" id="add" class="add">
-                      <i class="fas fa-plus"></i>
-                    </button>
+          <div class="sidebar_wrap">
+            <div class="side_box">
+              <h3>Your Cart</h3>
+              <ul>
+                <li class="cart_table">
+                  <div class="span2">
+                    <img src="images/Nav_Body.jpg" alt="Nav_Body">
                   </div>
-                </div>
-                <div class="text-right">
-                  <a href="#"></a>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="27" viewBox="0 0 21 27">
-                      <path d="M6.632 23.76L5.526 6.48h1.106l1.105 17.28zm7.736 0h-1.105l1.105-17.28h1.106zM9.948 6.48h1.105v17.28H9.947zM21 4.32h-1.104l-1.027 20.118C18.793 25.875 17.58 27 16.109 27H4.89c-1.471 0-2.684-1.125-2.76-2.563L1.105 4.32H0V3.24h5.526V2.16C5.526.969 6.518 0 7.736 0h5.527c1.219 0 2.21.969 2.21 2.16v1.08H21zM6.632 3.24h7.736V2.16c0-.597-.494-1.08-1.105-1.08H7.737c-.61 0-1.105.483-1.105 1.08zm12.157 1.08H2.211l1.024 20.062c.045.862.773 1.538 1.655 1.538h11.22c.881 0 1.61-.676 1.655-1.538z"></path>
-                    </svg>
-                  </a>
-                  <p class="price"><span class="linethrough">$35.80</span> <span class="mark">$32.20</span></p>
-                </div>
-              </li>
-            </ul>
-            <div class="subtotal_box">
-              <p class="sub">Subtotal <span>$99.30</span></p>
-              <p><a href="#" id="promo">+ Apply a promo code</a></p>
-              <form class="form_container" id="promo_box">
-                <div class="form_row col3">
-                  <div class="form-group span2">
-                    <label for="Address" class="sr-only">Address</label>
-                    <input type="text" class="form-control" placeholder="Address">
-                    <small class="error-msg">This is a required field.</small>
+                  <div class="span2">
+                    <p>Bali Bod Bundle</p>
+                    <div id="field">
+                      <button type="button" id="sub" class="sub">
+                        <i class="fas fa-minus"></i>
+                      </button>                    
+                      <input type="number" id="count" value="1" min="1" max="3">
+                      <button type="button" id="add" class="add">
+                        <i class="fas fa-plus"></i>
+                      </button>
+                    </div>
                   </div>
-                  <div class="form-group">
-                    <a href="#" class="btn btn-primary btn-sm">subscribe</a>
+                  <div class="text-right">
+                    <a href="#">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="21" height="27" viewBox="0 0 21 27">
+                        <path d="M6.632 23.76L5.526 6.48h1.106l1.105 17.28zm7.736 0h-1.105l1.105-17.28h1.106zM9.948 6.48h1.105v17.28H9.947zM21 4.32h-1.104l-1.027 20.118C18.793 25.875 17.58 27 16.109 27H4.89c-1.471 0-2.684-1.125-2.76-2.563L1.105 4.32H0V3.24h5.526V2.16C5.526.969 6.518 0 7.736 0h5.527c1.219 0 2.21.969 2.21 2.16v1.08H21zM6.632 3.24h7.736V2.16c0-.597-.494-1.08-1.105-1.08H7.737c-.61 0-1.105.483-1.105 1.08zm12.157 1.08H2.211l1.024 20.062c.045.862.773 1.538 1.655 1.538h11.22c.881 0 1.61-.676 1.655-1.538z"></path>
+                      </svg>
+                    </a>
+                    <p class="price"><span class="mark">$32.20</span></p>
                   </div>
+                </li>
+              </ul>
+              <div class="subtotal_box">
+                <p class="sub">Subtotal <span>$99.30</span></p>
+                <p><a href="#" id="promo">+ Apply a promo code</a></p>
+                <form class="form_container" id="promo_box">
+                  <div class="form_row col3">
+                    <div class="form-group span2">
+                      <label for="Address" class="sr-only">Address</label>
+                      <input type="text" class="form-control" placeholder="Address">
+                      <small class="error-msg">This is a required field.</small>
+                    </div>
+                    <div class="form-group">
+                      <a href="#" class="btn btn-primary btn-sm">subscribe</a>
+                    </div>
+                  </div>
+                </form>
+                <p class="sub total">Total <span>$99.30</span></p>              
+              </div>
+              <div class="sidebar_list">
+                <div>
+                  <img src="images/icon7.png" alt="icon7">
+                  <span>Fast worldwide delivery</span>
                 </div>
-              </form>
-              <p class="sub total">Subtotal <span>$99.30</span></p>              
-            </div>
-            <p class="text-center">Got a question? Email us at: <a href="#">hello@cocoandeve.com</a></p>            
-          </div>  
-          <div class="sidebar_btn">
-            <a href="#" class="btn btn-primary w-100">Secure Checkout</a>
-          </div> 
+                <div>
+                  <img src="images/icon8.png" alt="icon8">
+                  <span>Winner of 18 Beauty Awards</span>
+                </div>
+                <div>
+                  <img src="images/icon9.png" alt="icon9">
+                  <span>100% money back guarantee</span>
+                </div>
+              </div>
+              <div class="cart-drawer">
+                <div class="shopify-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="114" height="34" viewBox="0 0 114 34">
+                    <defs>
+                      <clipPath id="2ufra">
+                        <path fill="#fff" d="M5.54 0h102.92c2.507 0 4.54 1.458 4.54 3.255v27.49c0 1.797-2.033 3.255-4.54 3.255H5.54C3.034 34 1 32.542 1 30.745V3.255C1 1.458 3.033 0 5.54 0z"></path>
+                      </clipPath>
+                    </defs>
+                    <path fill="#fff" d="M6 0h102c2.762 0 5 1.586 5 3.542v26.916c0 1.956-2.238 3.542-5 3.542H6c-2.761 0-5-1.586-5-3.542V3.542C1 1.586 3.239 0 6 0"></path>
+                    <path fill="none" stroke="#d2d0cc" stroke-miterlimit="20" stroke-width="2" d="M5.54 0h102.92c2.507 0 4.54 1.458 4.54 3.255v27.49c0 1.797-2.033 3.255-4.54 3.255H5.54C3.034 34 1 32.542 1 30.745V3.255C1 1.458 3.033 0 5.54 0z" clip-path="url(&quot;#2ufra&quot;)"></path>
+                    <path d="M62.262 12.39a2.08 2.08 0 0 1 1.289 1.686c0 1.407-1.16 2.186-2.778 2.186A3.45 3.45 0 0 1 59 15.828l.443-1.254c.456.234.959.366 1.474.387.508 0 .782-.268.782-.602 0-.319-.196-.534-.743-.843a1.962 1.962 0 0 1-1.187-1.624c0-1.24 1.089-2.124 2.66-2.124a2.689 2.689 0 0 1 1.517.295l-.418 1.254a3.035 3.035 0 0 0-1.122-.244c-.508 0-.834.231-.834.588 0 .282.234.486.69.73zm6.44-2.635c.94 0 1.476.603 1.476 1.602a6.428 6.428 0 0 1-.13 1.152l-.705 3.65h-1.8l.678-3.534c.052-.257.08-.518.08-.781 0-.385-.155-.654-.559-.654-.574 0-1.187.72-1.421 1.882l-.6 3.087h-1.799l1.747-9.03h1.796l-.69 3.549.026.013a2.453 2.453 0 0 1 1.904-.935zm5.548.001a2.4 2.4 0 0 1 .289.007c1.293.105 2.253 1.21 2.144 2.464 0 2.19-1.435 4.06-3.56 4.06-.1.005-.202.003-.304-.004-1.3-.1-2.274-1.204-2.17-2.467 0-2.14 1.434-4.06 3.598-4.06zm-.887 5.174c.953 0 1.487-1.661 1.484-2.753 0-.521-.208-1.063-.847-1.063-.979 0-1.513 1.652-1.513 2.663 0 .64.26 1.153.874 1.153zm7.928-5.17c1.317 0 1.852 1.062 1.852 2.253 0 2.151-1.382 4.276-3.495 4.276a2.12 2.12 0 0 1-1.056-.232h-.039l-.496 2.612h-1.799l1.253-6.466c.147-.778.269-1.56.364-2.345h1.588l-.104.948h.026a2.48 2.48 0 0 1 1.905-1.05zm-1.723 5.195c1.006 0 1.696-1.626 1.696-2.766 0-.474-.17-.973-.718-.973-.623 0-1.212.731-1.421 1.832l-.3 1.651c.208.17.471.26.743.256zm6.14-7.735l.09.001a.843.843 0 0 1 .805.883v.066c-.018.548-.489.977-1.051.959h-.026a.816.816 0 0 1-.843-.884v-.01a1.02 1.02 0 0 1 1.024-1.015zm-1.303 2.676h1.807L84.99 16.16h-1.793zm6.394-.01v-.003zm0 0l-.247 1.33h-1.24l-.951 4.943h-1.8l.952-4.942h-.834l.259-1.333h.836l.052-.294a3.329 3.329 0 0 1 1.043-1.998 2.702 2.702 0 0 1 1.76-.59c.335-.015.667.038.979.156l-.352 1.383a1.921 1.921 0 0 0-.574-.09c-.6 0-.965.538-1.069 1.14l-.065.294zm4.33.008H97l-2.204 4.637a11.88 11.88 0 0 1-2.36 3.508A4.131 4.131 0 0 1 90.68 19l-.49-1.499a3.878 3.878 0 0 0 1.015-.5c.41-.272.745-.636.98-1.062a.37.37 0 0 0 .038-.294l-1.083-5.75h1.892s.408 3.813.442 4.303h.024c.506-1.518 1.63-4.299 1.63-4.299z"></path>
+                    <path d="M67.89 25.238a2 2 0 0 1-.014.171c-.114.993-.959 1.697-1.886 1.574-.982.103-1.863-.646-1.99-1.694l.976-.138.001.058c.036.563.491.99 1.017.95a.749.749 0 0 0 .078.007c.44.012.805-.359.817-.83 0-.528-.264-.74-1.045-.944-1.133-.284-1.681-.741-1.681-1.759 0-.952.698-1.62 1.787-1.62.886-.114 1.694.546 1.826 1.49l-.947.138c-.05-.476-.44-.826-.886-.798-.533 0-.818.274-.818.71 0 .447.194.658 1.007.87 1.096.284 1.757.683 1.757 1.815zm1.289 1.675v-5.83h3.209v.872h-2.195V23.5h1.773v.827h-1.773v1.717h2.313v.872h-3.328zm8.674-1.821v-.001zm0 0c-.143 1.113-1.048 1.932-2.096 1.896-1.457 0-2.298-1.026-2.298-2.687v-.61a2.503 2.503 0 0 1-.01-.247c.01-1.353 1.043-2.443 2.308-2.431 1.03-.096 1.944.712 2.05 1.815l-1.022.146c-.002-.607-.465-1.097-1.031-1.094-.752 0-1.233.642-1.233 1.79v.632c0 1.156.451 1.79 1.24 1.79.6-.016 1.09-.514 1.138-1.154zm5.195-4.01v3.705c.018.16.02.32 0 .48-.122 1.08-1.038 1.85-2.045 1.718a1.69 1.69 0 0 1-.42 0c-.986-.127-1.692-1.088-1.573-2.148v-3.755h1.026v3.693c0 .929.277 1.327.981 1.327.674 0 1.011-.358 1.011-1.376v-3.64zm1.487.002h1.827c1.183 0 1.92.514 1.92 1.664v.122c.042.708-.41 1.34-1.059 1.483l1.336 2.565H87.46l-1.222-2.39h-.687v2.39h-1.016zm1.81 2.669c.608 0 .924-.276.924-.871v-.114c0-.611-.338-.83-.916-.83h-.804v1.819zm3.327-2.67h3.208v.87h-2.195v1.544h1.773v.825h-1.773v1.71H93v.871h-3.328z"></path>
+                    <path fill="#95bf47" d="M31.768 10.043C31.78 10.15 34 25.608 34 25.608L28.556 27 16 24.764s1.498-11.929 1.553-12.348c.075-.557.093-.574.666-.76l1.945-.62a8.339 8.339 0 0 1 1.11-2.964c.799-1.305 1.782-2.04 2.77-2.07a1.58 1.58 0 0 1 1.344.612c.054-.004.106-.01.16-.01a2.059 2.059 0 0 1 1.833 1.298c.118.236.216.484.291.738l.61-.194a.488.488 0 0 1 .446.058l1.334 1.338s1.452.022 1.525.029a.2.2 0 0 1 .18.17zM27.034 8.84c-.158-.521-.522-1.394-1.265-1.54.2.595.3 1.22.298 1.85l.967-.31zm-1.622.52a4.999 4.999 0 0 0-.326-1.98 2.116 2.116 0 0 0-.712.534 5.16 5.16 0 0 0-1.058 2.115zm-1.346-2.687c-1.522.048-2.856 2.506-3.196 4.144l1.722-.55a6.014 6.014 0 0 1 1.3-2.812c.22-.249.48-.457.768-.616a.99.99 0 0 0-.594-.162z"></path>
+                    <path fill="#5e8e3e" d="M31.782 9.403a139.15 139.15 0 0 0-1.401-.028c-.701-.01-1.116-1.179-1.226-1.296A.27.27 0 0 0 29 8v18l5-1.348s-2.04-14.98-2.05-15.086a.189.189 0 0 0-.165-.167z"></path>
+                    <path fill="#fff" d="M26 12.24l-.611 2.466a3.246 3.246 0 0 0-1.492-.28c-1.188.083-1.2.89-1.188 1.09.064 1.105 2.76 1.346 2.91 3.933.12 2.034-1.003 3.426-2.615 3.535-1.103.104-2.195-.296-3.004-1.1l.41-1.882a3.567 3.567 0 0 0 1.93.814c.423-.012.756-.388.744-.839l-.002-.04c-.085-1.44-2.278-1.355-2.417-3.72-.117-1.992 1.096-4.01 3.773-4.193a3.064 3.064 0 0 1 1.559.212z"></path>
+                    <path fill="#d2d0cc" d="M45 29h1V6h-1z"></path>
+                  </svg>
+                </div>
+                <img src="images/cart.png" alt="cart" class="cart">
+              </div>
+              <p class="text-center got">Got a question? Email us at: <a href="#">hello@cocoandeve.com</a></p>            
+            </div>  
+            <div class="sidebar_btn">
+              <a href="#" class="btn btn-primary w-100">Secure Checkout</a>
+            </div> 
+          </div>
         </div>
         
       </div>
     </header>
 
-    <!--img section-->
-    <div class="grid_wrapper">
+    <!--prod-details section-->
+    <section class="prod_details">
+      <div class="container">
+        <div class="prod_details_wrap">
+          <div class="img_box">
+            <img src="images/hair-prod.jpg" alt="hair-prod">
+          </div>
+          <div class="content_box">
+            <p>Like a Virgin</p>
+            <h2>Healthy Hair Bundle</h2>
+            <p>
+              <span class="star">
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </span>
+              5.0/5 <a href="#">2 Reviews</a></p>
+            <p class="price"><span class="linethrough">$79.80</span> $65.40 <span class="mark">(Save 18%)</span></p>
+            <p>The ultimate scalp scrub and hair mask duo to leave your mane at the height of its hair game. This 2 step hair treatment will stimulate hair growth and repair years of damage with our Deep Clean Scalp Scrub and award-winning Coconut & Fig Hair Masque.</p>
+            <ul class="check_list">
+              <li><b>1 x Deep Clean Scalp Scrub (150ml):</b> Detox and cleanse your scalp to create a healthy environment for hair growth.</li>
+              <li><b>1 x Super Nourishing Hair Masque (212ml):</b> Nourish and repair your locks to seal split ends and prevent breakage. The result? Stronger, longer, thicker, healthier hair from root-to-tip.</li>
+            </ul>
+            <div class="add_cart">
+              <div id="field">
+                <button type="button" id="sub2" class="sub2">
+                  <i class="fas fa-minus"></i>
+                </button>                    
+                <input type="number" id="count2" value="1" min="1" max="3">
+                <button type="button" id="add2" class="add2">
+                  <i class="fas fa-plus"></i>
+                </button>
+              </div>
+              <button type="button" class="btn btn-primary btn-sm w-100">Add To Cart</button>
+            </div>
+            <p class="small"><b>FREE</b> standard shipping on all orders above $40 (SG)/$50 (MY)*</p>
+            <div class="pdp_promo_badge">
+              <div class="pdp_promo_badge_img">
+                <img src="images/PDProundel.png" alt="PDProundel">
+              </div>
+              <div class="pdp_promo_badge_note">
+                <p><span>Free Pillowcase worth $19.90 min. spend of $50</span></p>
+                <p>Use code <b>LOVEME</b></p>
+              </div>
+            </div>
+            <div class="add-to-cart">
+              <img src="images/get-sm1.jpg" alt="get-sm1">
+              <div class="content">
+                <p><a href="#">Microfibre Hair Towel Wrap</a></p>
+                <p><b>$24.90</b></p>
+              </div>
+              <div class="add">
+                <a href="#">
+                  <i class="fas fa-plus-circle"></i><br>
+                  <span>Add To Cart</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--description section-->
+    <section class="section_description">
+      <div class="container">
+        <div class="tab_list">
+          <ul class="tabs tabs3">
+            <li class="tab-link current" href="desc-1">Description</li>
+            <li class="tab-link" href="desc-2">Full Ingredients</li>
+            <li class="tab-link" href="desc-3">FAQ</li>
+          </ul>
+        </div>
+        <div class="tab-content tab-content3 current" id="desc-1">
+          <div class="grid_box col2">
+            <div>
+              <h3>About</h3>
+              <ul class="check_list">
+                <li><b>1 x Deep Clean Scalp Scrub:</b> Detox and cleanse your scalp to create a healthy environment for hair growth.</li>
+                <li><b>1 x Super Nourishing Hair Masque (212ml):</b> Nourish and repair your locks to seal split ends and prevent breakage. The result? Stronger, longer, thicker, healthier hair from root-to-tip.</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Proud to be</h3>
+              <ul class="img_list">
+                <li>
+                  <img src="images/icon1.jpg" alt="icon1">
+                  <p>100% Vegan</p>
+                </li>
+                <li>
+                  <img src="images/icon2.jpg" alt="icon2">
+                  <p>Cruelty Free</p>
+                </li>
+                <li>
+                  <img src="images/icon3.jpg" alt="icon3">
+                  <p>Gluten Free</p>
+                </li>
+                <li>
+                  <img src="images/icon4.png" alt="icon4">
+                  <p>Peta Approved</p>
+                </li>
+                <li>
+                  <img src="images/icon5.jpg" alt="icon5">
+                  <p>Ethically Sourced</p>
+                </li>
+                <li>
+                  <img src="images/icon6.jpg" alt="icon6">
+                  <p>Sulfate Free</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="tab-content tab-content3" id="desc-2">
+          <div class="grid_box">
+            <div>
+              <p class="col2">Aqua (water), cetearyl alcohol, cocos nucifera (coconut) fruit extract, dimethicone, behentrimonium chloride, parfum, glycerin, cetyl alcohol, sodium benzoate, ficus carica (fig) fruit extract, argania spinosa (argan) kernel oil, shea butter ethyl esters, caryocar brasiliense fruit oil, ricinus communis (castor) seed oil, hydrolyzed linseed extract, leuconostoc/radish root ferment filtrate, phenoxyethanol, cetrimonium chloride, potassium sorbate, ethylhexylglycerin, selaginella lepidophylla extract, saccharomyces/silicon ferment, saccharomyces/iron ferment, saccharomyces/magnesium ferment, saccharomyces/copper ferment, saccharomyces/zinc ferment, tocopherol, lactobacillus ferment, benzyl alcohol, benzyl salicylate, coumarin, limonene, linalool.</p>
+            </div>
+          </div>
+        </div>
+        <div class="tab-content tab-content3" id="desc-3">
+          <h3 class="span2">Frequently Asked Questions</h3>
+          <div class="grid_box col2">            
+            <div>              
+              <div class="question">
+                <h6>What is the Healthy Hair Bundle?</h6>
+                <p>The ultimate scalp scrub and hair mask duo to leave your mane at the height of its hair game. This 2 step hair treatment will stimulate hair growth and repair years of damage with our Deep Clean Scalp Scrub and award-winning Coconut & Fig Hair Masque.</p>
+              </div>
+              <div class="question">
+                <h6>What's inside the Healthy Hair Bundle?</h6>
+                <p>The Healthy Hair Bundle includes:</p>
+                <p>1 x Deep Clean Scalp Scrub: Detox and cleanse your scalp</p>                  
+                <p>1 x Super Nourishing Hair Masque: Nourish and repair your locks.</p>
+              </div>
+            </div>
+            <div>
+              <div class="question">
+                <h6>How do I use the Healthy Hair Bundle?</h6>
+                <p>In this 2 easy step hair treatment will stimulate hair growth and repair years of damage.</p>
+                <p>Step 1: Start with our Deep Clean Scalp Scrub.</p>                  
+                <p>Step 2: Towel-dry hair and apply our Super Nourishing Hair Masque.</p>
+                <p><a href="#">See all Product FAQs</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--img-block section-->
+    <div class="grid_wrapper bg-primary-light">      
+      <div class="content_box order1">
+        <div class="content_text">
+          <h2>Your new haircare routine, sorted.</h2>
+          <p>Perfect alone, but supercharged together, our Like a Virgin Hair Masque, and Deep Clean Scalp Scrub nourish your hair from root to tip with a routine that will leave you feeling fresh AF. Our scrub gives your scalp a deep clean, making way for our masque to work its wonders on your beloved tresses.</p>
+        </div>
+      </div>
       <div class="img_box">
         <img src="images/routine-sorted.jpg" alt="routine-sorted">
       </div>
-      <div class="content_box"></div>
+    </div>
+
+    <!--product-grid-box-->
+    <div class="product_grid">
+      <div class="container">
+        <h2>Nourish your routine with Bali Botanicals</h2>
+        <div class="product_grid_wrap">
+
+          <!--box-1-->
+          <div class="prod_box">
+            <img src="images/cst_vocanic.png" alt="cst_vocanic">
+            <div class="prod_content">
+              <h2>Volcanic Ash & Coconut Shell</h2>
+              <p>brushes away flakes and dead skin, increasing cellular turnover</p>
+            </div>
+          </div>
+
+          <!--box-2-->
+          <div class="prod_box">
+            <img src="images/cst_caffeine.png" alt="cst_caffeine">
+            <div class="prod_content">
+              <h2>Caffeine</h2>
+              <p>promotes healthy hair follicles, and stimulates hair growth</p>
+            </div>
+          </div>
+
+          <!--box-3-->
+          <div class="prod_box">
+            <img src="images/cst_aha.png" alt="cst_aha">
+            <div class="prod_content">
+              <h2>AHAs & BHA</h2>
+              <p>found in pineapple and Salicylic Acid break down excess oil and product buildup from dye, styling and dry shampoos</p>
+            </div>
+          </div>
+
+          <!--box-4-->
+          <div class="prod_box">
+            <img src="images/PP_LAV_HM_Ingredients_Coconuts.jpg" alt="PP_LAV_HM_Ingredients_Coconuts">
+            <div class="prod_content">
+              <h2>Raw virgin coconuts</h2>
+              <p>strengthen and repair the hair by preventing hair breakage and split ends</p>
+            </div>
+          </div>
+
+          <!--box-5-->
+          <div class="prod_box">
+            <img src="images/PP_LAV_HM_Ingredients_Figs.jpg" alt="PP_LAV_HM_Ingredients_Figs">
+            <div class="prod_content">
+              <h2>Fig and shea butter</h2>
+              <p>detangle, and moisturise hair without weighing it down</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+    <!--img-block section-->
+    <div class="grid_wrapper">      
+      <div class="content_box order1">
+        <div class="content_text">
+          <h2>The result?</h2>
+          <p>Cleaner, silkier, fuller-looking hair.</p>
+        </div>
+      </div>
+      <div class="img_box">
+        <img src="images/See-it-in-action2.jpg" alt="See-it-in-action2">
+      </div>
+    </div>
+
+    <!--img-block section-->
+    <div class="grid_wrapper bg-primary-light">      
+      <div class="content_box">
+        <div class="content_text">
+          <h2>Your new haircare routine, sorted.</h2>
+          <p>Perfect alone, but supercharged together, our Like a Virgin Hair Masque, and Deep Clean Scalp Scrub nourish your hair from root to tip with a routine that will leave you feeling fresh AF. Our scrub gives your scalp a deep clean, making way for our masque to work its wonders on your beloved tresses.</p>
+        </div>
+      </div>
+      <div class="img_box">
+        <img src="images/Scrub-masque-fruit.jpg" alt="Scrub-masque-fruit">
+      </div>
     </div>
 
     
     <!--prod-slider section-->
-    <div class="section_slider section_real bg-primary-light">
+    <div class="section_slider section_real bg-light-shade2">
       <div class="container">
         <h2>Real Results</h2>
         <div class="section_slider_wrap">
@@ -658,7 +934,7 @@
     </section>
 
     <!--scroll to top-->
-    <a href="#" class="scrollup"><i class="fas fa-arrow-up"></i></a>
+    <a href="#" class="scrollup"></a>
 
     <!--js file-->
     <script src="js/jquery-1.11.2.min.js"></script>

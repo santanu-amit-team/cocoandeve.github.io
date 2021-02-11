@@ -340,12 +340,15 @@
     .close-nav-menu {
       @include size(2.5rem);
       font-size: 1.5rem;
-      @include set-background(color(light));
+      color: color(white);
       @include margin(left, 0.5);
       cursor: pointer;
       display: none;
       align-items: center;
       justify-content: center;
+      position: absolute;
+      left: 270px;
+      top: 1.25rem;
     }
 
     .menu-overlay {
@@ -456,8 +459,11 @@
   overflow-x: hidden;
   transition: 0.5s;
 
+  .sidebar_wrap {
+    position: relative;
+  }
   .side_box {
-    padding: 1.25rem;
+    padding: 1.25rem 1.25rem 8rem;
 
     h3 {
       @include margin(bottom, 0.5);
@@ -487,41 +493,21 @@
 
         & > * {
           @include size(100%);
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
         }
 
         img {
           @include size(100%);
           object-fit: cover;
         }
-
-        #field {
-          border: 1px solid color(border);
-          display: grid;
-          grid-template-columns: 1fr 3fr 1fr;
-          grid-template-rows: auto;
-          justify-content: space-between;
-          align-items: center;
-          grid-gap: 0.25rem;
-          padding: 0.25rem 0;
-          @include margin(top, 1.5);
-          @include bd-radius(0.25rem);
-
-          input {
-            text-align: center;
-            padding: 0.5rem;
-            border: 0;
-            -moz-appearance: none;
-            -webkit-appearance: none;
-            -appearance: none;
-          }
-          button {
-            border: 0;
-            background: transparent;
-          }
-        }
       }
     }
 
+    #promo_box {
+      display: none;
+    }
     .subtotal_box {
       margin: 1rem 0;
       @include padding(bottom, 1);
@@ -530,14 +516,25 @@
 
       .sub {
         font-weight: weight(bold);
+        font-size: 1rem;
+        font-size: clamp(1rem, 2vw, 1.25rem);
         span {
           float: right;
         }
       }
+      a#promo {
+        color: color(accent);
+        text-decoration: underline;
+        @include margin(top, 1);
+      }
       .total {
         @include border(top, 1px, color(border));
-        @include padding(top, 1);
-        font-size: 1.5rem;
+        @include padding(top, 0.5);
+        font-size: 2rem;
+        font-weight: weight(bold);
+        span {
+          float: right;
+        }
       }
 
       .form_row {
@@ -571,9 +568,86 @@
     }
   }
 
+  .sidebar_list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 1rem;
+    @include padding(bottom, 1.5);
+    text-align: center;
+
+    img {
+      width: 3.125rem;
+    }
+
+    span {
+      display: block;
+      line-height: 1.4;
+    }
+  }
+
+  .cart-drawer {
+    padding: 1.25rem 0;
+
+    .shopify-icon {
+      position: relative;
+      text-align: center;
+
+      &:before {
+        content: "";
+        width: calc(50% - 62px);
+        height: 1px;
+        background: color(border);
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+      }
+      &:after {
+        content: "";
+        width: calc(50% - 62px);
+        height: 1px;
+        background: color(border);
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+      }
+    }
+
+    .cart {
+      max-width: 15rem;
+      margin: 0.938rem auto;
+      display: block;
+    }
+  }
+
+  p.got {
+    font-size: 1rem;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    a {
+      text-decoration: underline;
+      color: color(accent);
+      @include hover {
+        color: color(link-hover);
+      }
+    }
+  }
+
   .sidebar_btn {
     padding: 1.25rem;
     box-shadow: 0 -5px 12px rgba(0, 0, 0, 0.08);
+    @include set-background(color(white));
+    position: fixed;
+    bottom: 0;
   }
 
   .closebtn {
@@ -590,5 +664,32 @@
     text-align: center;
     font-size: 1.5rem;
     cursor: pointer;
+    z-index: 9;
+  }
+}
+
+#field {
+  border: 1px solid color(black);
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: auto;
+  justify-content: space-between;
+  align-items: center;
+  grid-gap: 0.25rem;
+  padding: 0.75rem;
+  @include bd-radius(0.25rem);
+  width: 6.75rem;
+
+  input {
+    text-align: center;
+    padding: 0;
+    border: 0;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -appearance: none;
+  }
+  button {
+    border: 0;
+    background: transparent;
   }
 }

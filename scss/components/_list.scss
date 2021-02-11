@@ -1,3 +1,8 @@
+li {
+  font-size: 1rem;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.4;
+}
 //order list
 .order_list {
   list-style: none;
@@ -35,11 +40,11 @@
     position: relative;
     @include padding(left, 2);
     @include margin(bottom, 0.75);
-    @include font-size($fs-base);
 
     &:before {
-      content: "\f058";
+      content: "\f00c";
       font-family: "Font Awesome 5 Free";
+      font-weight: weight(bold);
       position: absolute;
       left: 0;
       top: 0;

@@ -86,7 +86,7 @@
       padding: 0;
       z-index: 1;
       outline: none !important;
-      @include media(">=xl") {
+      @include media(">=1280px") {
         width: 100px;
       }
     }
@@ -109,7 +109,7 @@
     .slick-prev {
       left: 0px;
       border-radius: 0 150px 150px 0;
-      @include media(">=xl") {
+      @include media(">=1280px") {
         left: -53px;
         border-radius: 50%;
       }
@@ -117,7 +117,7 @@
     .slick-next {
       right: 0px;
       border-radius: 150px 0 0 150px;
-      @include media(">=xl") {
+      @include media(">=1280px") {
         right: -53px;
         border-radius: 50%;
       }
@@ -165,6 +165,7 @@
       h1 {
         text-shadow: 0 0 24px rgba(0, 48, 45, 0.25);
         font-size: 4.5rem;
+        color: color(white);
       }
       .icon-mob {
         font-size: 4rem;
@@ -310,21 +311,20 @@
   .img_box {
     @include margin(top, 3);
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
-    grid-gap: 0.5rem;
+    grid-gap: 0;
     justify-content: space-between;
     align-items: center;
-    @include media(">=sm") {
-      grid-template-columns: repeat(3, 1fr);
-    }
-    @include media(">=lg") {
-      grid-template-columns: repeat(6, 1fr);
-    }
 
     img {
-      padding: 1rem;
-      width: 200px;
+      padding: 1rem 0.469rem;
+    }
+    @include media(">=md") {
+      grid-template-columns: repeat(6, 1fr);
+      img {
+        padding: 1rem;
+      }
     }
   }
 }

@@ -1,0 +1,48 @@
+// half box
+.grid_wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 0;
+  @include media(">=md") {
+    grid-template-columns: repeat(2, 1fr);
+    .order1 {
+      order: 1;
+    }
+  }
+
+  .img_box {
+    img {
+      @include size(100%);
+      object-fit: cover;
+    }
+  }
+  .content_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .content_text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      width: 100%;
+      @include content-gap();
+      padding: 2rem 0.938rem;
+
+      p {
+        font-size: 1rem;
+        font-size: clamp(1rem, 2vw, 1.25rem);
+        line-height: 1.3;
+      }
+    }
+    @include media(">=md") {
+      min-height: 580px;
+      .content_text {
+        max-width: calc(1170px / 2);
+        padding: 2rem 4rem;
+      }
+    }
+  }
+}
