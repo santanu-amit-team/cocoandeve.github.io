@@ -46,7 +46,9 @@
   $(document).on("click",".menu-item-has-children",function(event){
     $(this).toggleClass('active');
     $('.menu-item-has-children').find('.sub-menu').css('maxHeight','');
-    $(this).find('.sub-menu').css('maxHeight',$(this).find('.sub-menu')[0].scrollHeight+'px');
+    if($(this).hasClass('active')){
+      $(this).find('.sub-menu').css('maxHeight',$(this).find('.sub-menu')[0].scrollHeight+'px');
+    }
   });
 
   function collapseSubMenu(){
