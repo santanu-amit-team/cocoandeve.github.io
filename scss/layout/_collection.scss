@@ -92,7 +92,7 @@
   }
 
   .content {
-    padding: 1.5rem 0.938em;
+    padding: 1.875rem 0.938em;
     display: grid;
     place-items: center;
     @include media(">=xl") {
@@ -131,22 +131,26 @@
 
 // collection img-text section
 .collection_img_text {
-  background: bg("hair_back_img.jpg") no-repeat center;
-  background-size: cover;
-  height: 560px;
+  background: bg("hair_back_img.jpg") no-repeat center top;
+  background-size: 300%;
+  height: 480px;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  @include margin(top, 4.5);
+  margin: 2.5rem 0 2rem;
   padding: 0 0.938em;
   @include media(">=md") {
+    background: bg("hair_back_img.jpg") no-repeat center;
+    background-size: cover;
     padding: 0;
     align-items: center;
+    margin: 4.5rem 0 0;
+    height: 560px;
   }
 
   .content {
     @include set-background(color(secondary));
-    padding: 1.5rem 0.938em;
+    padding: 1.2rem 1.5rem;
     width: 100%;
     @include media(">=md") {
       width: 50%;
@@ -155,6 +159,10 @@
 
     h2 {
       color: color(white);
+      font-size: 2.5rem;
+      @include media(">=md") {
+        font-size: 3rem;
+      }
     }
   }
 }

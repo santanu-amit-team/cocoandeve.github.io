@@ -79,6 +79,9 @@
                   font-size: 1rem;
                   font-weight: weight(regular);
                 }
+                .fa-angle-down {
+                  transition: all ease 0.5s;
+                }
               }
             }
           }
@@ -92,6 +95,13 @@
               a {
                 padding: 0.5rem 0.938rem;
               }
+            }
+          }
+
+          &.active {
+            .fa-angle-down {
+              transform: rotate(180deg);
+              transition: all ease 0.5s;
             }
           }
         }

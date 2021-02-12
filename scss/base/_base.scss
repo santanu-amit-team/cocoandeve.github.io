@@ -1,1 +1,14 @@
 // add your base style here
+.hidden-scrolling {
+  overflow-y: hidden;
+}
+@include media("<md") {
+  .hideMob {
+    display: none;
+  }
+}
+@include media("<sm") {
+  .hideSml {
+    display: none;
+  }
+}

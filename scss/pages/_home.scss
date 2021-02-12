@@ -71,6 +71,9 @@
     .slick-prev,
     .slick-next {
       z-index: 3;
+      @include media(">=md") {
+        top: 35%;
+      }
     }
 
     .slick-arrow {
