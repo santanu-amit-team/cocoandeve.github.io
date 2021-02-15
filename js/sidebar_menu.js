@@ -44,6 +44,7 @@
 
 
   $(document).on("click",".menu-item-has-children",function(event){
+    $(this).siblings('.menu-item-has-children').removeClass('active');
     $(this).toggleClass('active');
     $('.menu-item-has-children').find('.sub-menu').css('maxHeight','');
     if($(this).hasClass('active')){

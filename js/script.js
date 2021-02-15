@@ -136,6 +136,52 @@ $('.center2').slick({
   ]
 });
 
+/*Center Mode*/
+$('.center3').slick({
+  dots: true,  
+  centerMode: true,
+  centerPadding: '120px',
+  slidesToShow: 1,
+  responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        arrows: true,
+        centerMode: true,
+        centerPadding: '30px',
+        slidesToShow: 1
+      }
+    },
+    {
+      breakpoint: 992,
+      settings: {
+        arrows: true,
+        centerMode: true,
+        centerPadding: '120px',
+        slidesToShow: 1
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: true,
+        centerMode: true,
+        centerPadding: '90px',
+        slidesToShow: 1
+      }
+    },
+    {
+      breakpoint: 576,
+      settings: {
+        arrows: true,
+        centerMode: true,
+        centerPadding: '30px',
+        slidesToShow: 1
+      }
+    }
+  ]
+});
+
 
 //tab script start
 // tab-1
@@ -223,47 +269,48 @@ AOS.init({
 });
 
 //prod-slider
-$('.slider-for').slick({
+$(".slider-for").slick({
   slidesToShow: 1,
   slidesToScroll: 1,
   arrows: false,
   fade: true,
-  asNavFor: '.slider-nav'
+  asNavFor: ".slider-nav"
 });
-$('.slider-nav').slick({
-  slidesToShow: 4,
+$(".slider-nav").slick({
+  slidesToShow: 5,
   slidesToScroll: 1,
-  vertical:true,
-  asNavFor: '.slider-for',
+  vertical: true,
+  asNavFor: ".slider-for",
   dots: false,
   focusOnSelect: true,
-  verticalSwiping:true,
+  verticalSwiping: true,
   responsive: [
-  {
+    {
       breakpoint: 992,
       settings: {
-        vertical: false,
+        vertical: false
       }
-  },
-  {
-    breakpoint: 768,
-    settings: {
-      vertical: false,
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        vertical: false
+      }
+    },
+    {
+      breakpoint: 580,
+      settings: {
+        vertical: false,
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 380,
+      settings: {
+        vertical: false,
+        slidesToShow: 2
+      }
     }
-  },
-  {
-    breakpoint: 580,
-    settings: {
-      vertical: false,
-      slidesToShow: 3,
-    }
-  },
-  {
-    breakpoint: 380,
-    settings: {
-      vertical: false,
-      slidesToShow: 2,
-    }
-  }
   ]
 });
+

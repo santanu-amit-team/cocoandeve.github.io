@@ -42,6 +42,10 @@
       span {
         padding: 0 0.5rem;
         font-weight: weight(bold);
+        display: block;
+        @include media(">=480px") {
+          display: inline-block;
+        }
       }
     }
     .hide_box {
