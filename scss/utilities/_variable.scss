@@ -2,6 +2,7 @@
 
 $primary: #f4436c !default;
 $primary-light: #f5dadf !default;
+$primary-lighter: #fff9f9 !default;
 $secondary: #00635b !default;
 $secondary-light: #1a736a !default;
 
@@ -40,6 +41,7 @@ $clr-shade2-light: #f9eeca !default;
 $color: (
   primary: $primary,
   primary-light: $primary-light,
+  primary-lighter: $primary-lighter,
   secondary: $secondary,
   secondary-light: $secondary-light,
   success: $success,

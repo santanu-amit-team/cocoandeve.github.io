@@ -25,13 +25,16 @@
 @import "layout/content";
 @import "layout/slider";
 @import "layout/prod_list";
-@import "layout/collection";
 @import "layout/grid";
-@import "layout/prod-details";
+@import "layout/article";
+@import "layout/pagination";
 @import "layout/footer";
 
 //pages
 @import "pages/home";
+@import "pages/collection";
+@import "pages/prod-details";
+@import "pages/blog";
 
 //responsive
 @import "components/responsive";

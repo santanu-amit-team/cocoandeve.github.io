@@ -1,0 +1,75 @@
+/*....article section
+...........................*/
+.single_article {
+  @include margin(bottom, 3.75);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 0;
+  justify-content: space-between;
+  align-items: center;
+  @include media(">=md") {
+    &.odd {
+      grid-template-columns: 55% 45%;
+      .article_body {
+        margin-left: -10%;
+        width: 110%;
+      }
+    }
+    &.even {
+      grid-template-columns: 45% 55%;
+      .article_body {
+        order: -1;
+        margin-right: -10%;
+        width: 110%;
+      }
+    }
+  }
+
+  .article_image {
+    img {
+      @include size(100%);
+      object-fit: cover;
+    }
+  }
+  .article_body {
+    @include set-background(color(primary-lighter));
+    padding: 0.938rem;
+    width: 90%;
+    margin: -3.125rem auto 0;
+    z-index: 1;
+    @include media(">=md") {
+      padding: 1.875rem;
+      width: 100%;
+      margin: 0;
+    }
+
+    a {
+      color: color(black);
+      @include hover {
+        text-decoration: underline;
+      }
+    }
+
+    h2 {
+      @include margin(bottom, 0.25);
+    }
+
+    .tag {
+      font-size: 1rem;
+      @include margin(bottom, 1.5);
+      font-style: italic;
+    }
+
+    .post_meta {
+      @include border(top, 1px, color(border));
+      padding: 0.25rem 0;
+      font-size: $fs-sm;
+      font-weight: weight(bold);
+
+      span + span {
+        @include padding(left, 1);
+      }
+    }
+  }
+}

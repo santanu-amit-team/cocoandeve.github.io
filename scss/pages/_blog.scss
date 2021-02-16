@@ -1,0 +1,122 @@
+/*....blog header section
+...........................*/
+.blog_header {
+  padding: 1.875rem 0;
+  h2 {
+    text-align: center;
+    color: color(accent);
+    position: relative;
+    @include padding(bottom, 0.5);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 6rem;
+      height: 0.25rem;
+      background: color(secondary);
+      @include m-auto();
+      @include bd-radius(0.25rem);
+    }
+  }
+
+  &_box {
+    margin: 3rem 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 1.875rem;
+    @include media(">=md") {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    & > * {
+      height: 200px;
+      display: grid;
+      place-items: center;
+      background: bg("blog_hair.jpg") no-repeat center;
+      background-size: 100%;
+      box-shadow: 0px 0px 14px 7px rgba(158, 158, 158, 0.14%);
+
+      span {
+        padding: 0.5rem 0.75rem;
+        background: color(white);
+        font-size: 1.5rem;
+        line-height: 1.2;
+        font-weight: weight(bold);
+      }
+
+      &.hair_box {
+        background: bg("blog_hair.jpg") no-repeat center;
+        background-size: 100%;
+      }
+      &.tan_box {
+        background: bg("blog_tan.jpg") no-repeat center;
+        background-size: 100%;
+      }
+      &.body_box {
+        background: bg("blog_body.jpg") no-repeat center;
+        background-size: 100%;
+      }
+
+      &:hover {
+        opacity: 0.8;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+/*....blog post section
+...........................*/
+.blog_details {
+  .blog_content {
+    @include content-gap(1.25);
+    @include margin(bottom, 4);
+    h3 {
+      color: color(secondary);
+      font-style: italic;
+    }
+    p {
+      font-size: $fs-base;
+    }
+    .img_box {
+      text-align: center;
+      padding: 2rem 0;
+      p {
+        @include margin(bottom, 1);
+        a {
+          font-style: italic;
+          font-weight: weight(bold);
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+/*....blog checkout section
+...........................*/
+.blog_checkout {
+  @include margin(bottom, 6);
+  .container {
+    @include content-gap(4);
+
+    p {
+      font-size: $fs-base;
+      span {
+        display: block;
+      }
+    }
+    a {
+      color: color(accent);
+      text-decoration: underline;
+
+      @include hover {
+        color: color(primary);
+      }
+    }
+  }
+}

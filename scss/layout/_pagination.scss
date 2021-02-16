@@ -1,0 +1,32 @@
+/*....pagination section
+...........................*/
+.section_pagination {
+  @include padding(bottom, 6.25);
+  text-align: center;
+  p {
+    font-size: $fs-base;
+    @include margin(bottom, 1);
+  }
+  ul {
+    li {
+      padding: 0.5rem 0.75rem;
+      display: inline-block;
+      font-size: $fs-base;
+      a {
+        color: color(primary);
+        @include hover {
+          text-decoration: underline;
+        }
+      }
+      &:last-child {
+        padding: 0.938rem;
+        @include set-background(color(primary));
+        a {
+          color: color(white);
+          font-size: 1.25rem;
+          line-height: 1;
+        }
+      }
+    }
+  }
+}

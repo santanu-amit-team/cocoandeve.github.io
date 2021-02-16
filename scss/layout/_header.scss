@@ -481,8 +481,9 @@
     padding: 1.25rem 1.25rem 8rem;
 
     h3 {
-      @include margin(bottom, 0.5);
-      @include padding(bottom, 0.5);
+      @include margin(bottom, 0.75);
+      @include padding(bottom, 0.75);
+      text-align: center;
       @include border(bottom, 1px, color(border));
     }
     ul {
@@ -663,16 +664,18 @@
     @include set-background(color(white));
     position: fixed;
     bottom: 0;
+    width: 460px;
+    max-width: 95%;
   }
 
   .closebtn {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 0.625rem;
+    right: 0.625rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    @include set-background(color(primary));
+    color: color(black);
     padding: 0;
     width: 3.75rem;
     height: 3.75rem;

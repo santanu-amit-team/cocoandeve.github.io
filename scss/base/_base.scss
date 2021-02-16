@@ -1,6 +1,7 @@
 // add your base style here
 .hidden-scrolling {
   overflow-y: hidden;
+  position: fixed;
 }
 @include media("<md") {
   .hideMob {
