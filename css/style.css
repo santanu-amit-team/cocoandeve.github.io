@@ -8437,7 +8437,6 @@ hr {
     bottom: 0;
     width: 460px;
     max-width: 100%;
-    padding-bottom: env(safe-area-inset-bottom);
      }*/
      .sidebar .sidebar_btn {
          box-shadow: 0 -5px 12px rgb(0 0 0 / 8%);
@@ -8448,20 +8447,11 @@ hr {
     width: 460px;
     max-width: 100%;
     text-align: center;
+    max-width: 100%;
     padding-bottom: env(safe-area-inset-bottom);
   }
 
-  @media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
-    .sidebar .sidebar_btn {
-    position: -webkit-sticky;
-    position: sticky ;
-    padding-bottom: env(safe-area-inset-bottom);
-  }
-
-}
+  
   .sidebar .sidebar_btn a {
         margin: 1.25rem auto;
         max-width: 90%;
@@ -9834,3 +9824,14 @@ hr {
 @media (max-width: 575px) {
   .hideSml {
     display: none; } }
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+    .sidebar .sidebar_btn {
+    position: -webkit-sticky;
+    position: sticky ;
+  }
+
+}
