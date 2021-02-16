@@ -13,7 +13,7 @@ $(window).bind("load", function () {
 //   document.getElementById("mysidebar").style.width = "0";
 // }
 function openbtn() {
-  $("#mysidebar").css({"width": "460px", "max-width": "95%"});
+  $("#mysidebar").css({"width": "460px", "max-width": "100%"});
 }
 function closebtn() {
   $("#mysidebar").css({"width": "0"});

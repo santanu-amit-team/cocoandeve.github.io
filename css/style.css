@@ -8432,7 +8432,7 @@ hr {
     position: fixed;
     bottom: 0;
     width: 460px;
-    max-width: 95%; }
+    max-width: 100%; }
   .sidebar .closebtn {
     position: absolute;
     top: 0.625rem;
