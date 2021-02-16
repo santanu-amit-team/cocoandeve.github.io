@@ -8426,8 +8426,10 @@ hr {
     .sidebar p.got a {
       text-decoration: underline;
       color: #333; }
+
       .sidebar p.got a:hover {
         color: #f4436c; }
+
   /*.sidebar .sidebar_btn {
     padding: 1.25rem;
     box-shadow: 0 -5px 12px rgba(0, 0, 0, 0.08);
@@ -8438,6 +8440,7 @@ hr {
     width: 460px;
     max-width: 100%;
      }*/
+
      .sidebar .sidebar_btn {
          box-shadow: 0 -5px 12px rgb(0 0 0 / 8%);
     background-color: #fff;
@@ -9830,7 +9833,6 @@ hr {
   and (max-device-width: 812px) 
   and (-webkit-min-device-pixel-ratio: 3) { 
     .sidebar .sidebar_btn {
-    position: -webkit-sticky;
     position: sticky ;
   }
 
