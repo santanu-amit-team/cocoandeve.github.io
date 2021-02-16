@@ -8428,7 +8428,7 @@ hr {
       color: #333; }
       .sidebar p.got a:hover {
         color: #f4436c; }
-  .sidebar .sidebar_btn {
+  /*.sidebar .sidebar_btn {
     padding: 1.25rem;
     box-shadow: 0 -5px 12px rgba(0, 0, 0, 0.08);
     background-color: #fff;
@@ -8436,7 +8436,24 @@ hr {
     position: fixed !important;
     bottom: 0;
     width: 460px;
-    max-width: 100%; }
+    max-width: 100%;
+    padding-bottom: env(safe-area-inset-bottom);
+     }*/
+     .sidebar .sidebar_btn {
+         box-shadow: 0 -5px 12px rgb(0 0 0 / 8%);
+    background-color: #fff;
+    color: #000;
+    position: fixed !important;
+    bottom: 0;
+    width: 460px;
+    max-width: 100%;
+    text-align: center;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .sidebar .sidebar_btn a {
+        margin: 1.25rem auto;
+        max-width: 90%;
+  }
   .sidebar .closebtn {
     position: absolute;
     top: 0.625rem;
