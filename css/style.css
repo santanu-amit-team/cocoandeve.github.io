@@ -8282,7 +8282,11 @@ hr {
   background-color: white;
   color: #000;
   overflow-x: hidden;
-  transition: 0.5s; }
+  transition: all 1s ease-in-out; 
+  -webkit-transition: all 1s ease-in-out; 
+  -moz-transition: all 1s ease-in-out; 
+  -o-transition: all 1s ease-in-out; 
+}
   .sidebar .sidebar_wrap {
     position: relative; }
   .sidebar .side_box {
@@ -8429,7 +8433,7 @@ hr {
     box-shadow: 0 -5px 12px rgba(0, 0, 0, 0.08);
     background-color: #fff;
     color: #000;
-    position: fixed;
+    position: fixed !important;
     bottom: 0;
     width: 460px;
     max-width: 100%; }
