@@ -8443,13 +8443,25 @@ hr {
          box-shadow: 0 -5px 12px rgb(0 0 0 / 8%);
     background-color: #fff;
     color: #000;
-    position: fixed !important;
+    position: fixed ;
     bottom: 0;
     width: 460px;
     max-width: 100%;
     text-align: center;
     padding-bottom: env(safe-area-inset-bottom);
   }
+
+  @media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+    .sidebar .sidebar_btn {
+    position: -webkit-sticky;
+    position: sticky ;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+}
   .sidebar .sidebar_btn a {
         margin: 1.25rem auto;
         max-width: 90%;
