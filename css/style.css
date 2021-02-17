@@ -7736,27 +7736,43 @@ p {
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch; }
 
-li {
-  font-size: 1rem;
-  font-size: clamp(1rem, 2vw, 1.25rem);
-  line-height: 1.4; }
+li ul {
+  margin-top: 1em; }
 
 .order_list {
   list-style: none;
   counter-reset: my-counter; }
   .order_list li {
     counter-increment: my-counter;
-    margin-bottom: 0.5em;
-    padding-left: 1em; }
+    padding-left: 1.5em;
+    position: relative; }
     .order_list li::before {
       content: counter(my-counter) ". ";
-      color: #00635b; }
+      color: #000;
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-weight: 700; }
+    .order_list li .suborder_list {
+      list-style: none;
+      counter-reset: my-counter; }
+      .order_list li .suborder_list li {
+        counter-increment: my-counter; }
+        .order_list li .suborder_list li::before {
+          content: counter(my-counter) ". ";
+          color: #000;
+          font-weight: 400; }
+        .order_list li .suborder_list li ul {
+          margin-left: 1.25em; }
+          .order_list li .suborder_list li ul li {
+            counter-increment: my-counter3; }
+            .order_list li .suborder_list li ul li::before {
+              content: ""; }
 
 .unorder_list {
   list-style: disc;
   margin-left: 1.75em; }
   .unorder_list li {
-    margin-bottom: 0.5em;
     padding-left: 0em; }
   .unorder_list ul {
     list-style: circle; }
@@ -8282,11 +8298,10 @@ hr {
   background-color: white;
   color: #000;
   overflow-x: hidden;
-  transition: all 1s ease-in-out; 
-  -webkit-transition: all 1s ease-in-out; 
-  -moz-transition: all 1s ease-in-out; 
-  -o-transition: all 1s ease-in-out; 
-}
+  transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out; }
   .sidebar .sidebar_wrap {
     position: relative; }
   .sidebar .side_box {
@@ -8426,39 +8441,24 @@ hr {
     .sidebar p.got a {
       text-decoration: underline;
       color: #333; }
-
       .sidebar p.got a:hover {
         color: #f4436c; }
-
-  /*.sidebar .sidebar_btn {
-    padding: 1.25rem;
+  .sidebar .sidebar_btn {
     box-shadow: 0 -5px 12px rgba(0, 0, 0, 0.08);
     background-color: #fff;
     color: #000;
-    position: fixed !important;
-    bottom: 0;
-    width: 460px;
-    max-width: 100%;
-     }*/
-
-     .sidebar .sidebar_btn {
-         box-shadow: 0 -5px 12px rgb(0 0 0 / 8%);
-    background-color: #fff;
-    color: #000;
-    position: fixed ;
+    position: fixed;
     bottom: 0;
     width: 460px;
     max-width: 100%;
     text-align: center;
-    max-width: 100%;
-    padding-bottom: env(safe-area-inset-bottom);
-  }
-
-  
-  .sidebar .sidebar_btn a {
-        margin: 1.25rem auto;
-        max-width: 90%;
-  }
+    padding-bottom: env(safe-area-inset-bottom); }
+    .sidebar .sidebar_btn a {
+      margin: 1.25rem auto;
+      max-width: 90%; }
+    @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+      .sidebar .sidebar_btn {
+        position: sticky; } }
   .sidebar .closebtn {
     position: absolute;
     top: 0.625rem;
@@ -8505,6 +8505,76 @@ hr {
 .section_content > * + * {
   margin-top: 1em; }
 
+.section_content .container > * + * {
+  margin-top: 1em; }
+
+.section_content_wrap {
+  margin: 3rem 0; }
+  .section_content_wrap > * + * {
+    margin-top: 1.5em; }
+  .section_content_wrap a {
+    color: #000;
+    font-weight: 700;
+    text-decoration: underline; }
+    .section_content_wrap a:hover {
+      color: #f4436c; }
+
+.section_content p {
+  font-size: 1rem;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.3; }
+  .section_content p span.tag {
+    font-size: 1rem;
+    color: #9c9c9c;
+    display: block;
+    padding-bottom: 0.5em; }
+
+.section_content a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: underline; }
+  .section_content a:hover {
+    color: #f4436c; }
+
+.section_content li {
+  font-size: 1rem;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.4; }
+
+.section_content .unorder_list li + li {
+  margin-top: 1.25em; }
+
+.section_content .order_list li + li {
+  margin-top: 1.25em; }
+
+.section_content .order_list li p {
+  margin-top: 1.25em; }
+
+.section_content .border_btm {
+  border-bottom: 1px #e1e1e1 solid;
+  padding-bottom: 1em;
+  margin-bottom: 2em; }
+
+.section_content .content_box {
+  margin-top: 4.5em; }
+  .section_content .content_box > * + * {
+    margin-top: 1.5em; }
+
+.section_content .content_grid {
+  margin-top: 3em;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 1.875rem; }
+  @media (min-width: 576px) {
+    .section_content .content_grid {
+      grid-template-columns: repeat(2, 1fr); } }
+  .section_content .content_grid > * > * + * {
+    margin-top: 1.5em; }
+  .section_content .content_grid.border_btm {
+    padding-bottom: 2em;
+    margin-bottom: 0em; }
+
 .tab_list {
   display: flex;
   justify-content: center;
@@ -8529,7 +8599,8 @@ hr {
           display: grid;
           grid-template-columns: repeat(4, 1fr); } }
     .tab_list ul.tabs li + li {
-      border-left: 1px #333 solid; }
+      border-left: 1px #333 solid;
+      margin-top: 0; }
     .tab_list ul.tabs li {
       padding: 0.5rem;
       font-size: 1rem;
@@ -8746,6 +8817,12 @@ hr {
         font-size: 1rem;
         font-size: clamp(1rem, 2vw, 1.25rem);
         line-height: 1.3; }
+      .grid_wrapper .content_box .content_text a {
+        color: #000;
+        font-weight: 500;
+        text-decoration: underline; }
+        .grid_wrapper .content_box .content_text a:hover {
+          color: #f4436c; }
     @media (min-width: 768px) {
       .grid_wrapper .content_box {
         min-height: 580px; }
@@ -9218,6 +9295,8 @@ hr {
       width: 100%;
       height: 100%;
       object-fit: cover; }
+  .section_get_slider {
+    margin: 2.5rem 0; }
 
 @media (max-width: 767px) {
   .hero_collection .container {
@@ -9810,6 +9889,62 @@ hr {
     .blog_checkout .container a:hover {
       color: #f4436c; }
 
+.section_boximg {
+  padding: 1rem 0; }
+  @media (min-width: 576px) {
+    .section_boximg {
+      padding: 1rem 0; } }
+  @media (min-width: 768px) {
+    .section_boximg {
+      padding: 4rem 0; } }
+  .section_boximg .container {
+    padding: 0; }
+    @media (min-width: 576px) {
+      .section_boximg .container {
+        padding: 0 0.938rem; } }
+  .section_boximg_wrap {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 1.875rem; }
+    @media (min-width: 768px) {
+      .section_boximg_wrap {
+        grid-template-columns: repeat(2, 1fr); } }
+    .section_boximg_wrap .boximg_img {
+      height: 23rem; }
+      @media (min-width: 768px) {
+        .section_boximg_wrap .boximg_img {
+          height: auto; } }
+      .section_boximg_wrap .boximg_img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; }
+    .section_boximg_wrap .boximg_content {
+      width: 95%;
+      max-width: 21.5rem;
+      margin: 0 auto;
+      margin-top: -5.625em;
+      padding: 1.5rem;
+      background-color: #fff;
+      color: #000;
+      position: relative; }
+      .section_boximg_wrap .boximg_content > * + * {
+        margin-top: 1em; }
+      @media (min-width: 768px) {
+        .section_boximg_wrap .boximg_content {
+          margin: -5.625rem 0 0 0;
+          width: calc(100% - 20%);
+          max-width: 100%; } }
+      .section_boximg_wrap .boximg_content p {
+        font-size: 1rem;
+        font-size: clamp(1rem, 2vw, 1.25rem); }
+      .section_boximg_wrap .boximg_content a {
+        color: #000;
+        font-weight: 500;
+        text-decoration: underline; }
+        .section_boximg_wrap .boximg_content a:hover {
+          color: #f4436c; }
+
 @media (max-width: 767px) {
   .section_Companies,
   .section_feature,
@@ -9827,13 +9962,3 @@ hr {
 @media (max-width: 575px) {
   .hideSml {
     display: none; } }
-
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
-    .sidebar .sidebar_btn {
-    position: sticky ;
-  }
-
-}

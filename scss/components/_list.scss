@@ -1,7 +1,7 @@
 li {
-  font-size: 1rem;
-  font-size: clamp(1rem, 2vw, 1.25rem);
-  line-height: 1.4;
+  ul {
+    @include margin(top, 1);
+  }
 }
 //order list
 .order_list {
@@ -10,12 +10,41 @@ li {
 
   li {
     counter-increment: my-counter;
-    @include margin(bottom, 0.5);
-    @include padding(left, 1);
+    @include padding(left, 1.5);
+    position: relative;
 
     &::before {
       content: counter(my-counter) ". ";
-      color: color(secondary);
+      color: color(black);
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-weight: weight(bold);
+    }
+
+    .suborder_list {
+      list-style: none;
+      counter-reset: my-counter;
+
+      li {
+        counter-increment: my-counter;
+        &::before {
+          content: counter(my-counter) ". ";
+          color: color(black);
+          font-weight: weight(regular);
+        }
+
+        ul {
+          @include margin(left, 1.25);
+
+          li {
+            counter-increment: my-counter3;
+            &::before {
+              content: "";
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -26,7 +55,6 @@ li {
   @include margin(left, 1.75);
 
   li {
-    @include margin(bottom, 0.5);
     @include padding(left, 0);
   }
   ul {

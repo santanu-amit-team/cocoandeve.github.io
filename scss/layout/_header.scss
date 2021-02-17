@@ -472,7 +472,10 @@
   right: 0;
   @include set-background(lighten(color(white), 10%));
   overflow-x: hidden;
-  transition: 0.5s;
+  transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
 
   .sidebar_wrap {
     position: relative;
@@ -659,13 +662,22 @@
   }
 
   .sidebar_btn {
-    padding: 1.25rem;
     box-shadow: 0 -5px 12px rgba(0, 0, 0, 0.08);
     @include set-background(color(white));
     position: fixed;
     bottom: 0;
     width: 460px;
     max-width: 100%;
+    text-align: center;
+    padding-bottom: env(safe-area-inset-bottom);
+
+    a {
+      margin: 1.25rem auto;
+      max-width: 90%;
+    }
+    @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+      position: sticky;
+    }
   }
 
   .closebtn {
