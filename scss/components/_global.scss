@@ -69,6 +69,9 @@ hr {
 .bg-primary-light {
   @include set-background(color(primary-light));
 }
+.bg-primary-light-500 {
+  @include set-background(color(primary-light-500));
+}
 .bg-secondary {
   @include set-background(color(secondary));
 }
@@ -77,6 +80,9 @@ hr {
 }
 .bg-light-shade2 {
   @include set-background(color(clr-shade2-light));
+}
+.bg-shade3 {
+  @include set-background(color(clr-shade3));
 }
 
 /*.....scroll to top

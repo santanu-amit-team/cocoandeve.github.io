@@ -1,0 +1,199 @@
+/*....hero section
+...........................*/
+.affiliate_hero {
+  @include media(">=md") {
+    background: bg("affiliate-banner.jpg") no-repeat;
+    background-position: -150px bottom;
+    background-size: cover;
+    background-color: #dba0a6;
+  }
+  @include media(">=xl") {
+    background-position: left bottom;
+  }
+  .container {
+    padding: 0;
+    @include media(">=md") {
+      padding: 0 0.938rem;
+    }
+  }
+  &_wrap {
+    @include media(">=md") {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .hero_img {
+      background: #ecb9c0;
+      @include media(">=md") {
+        display: none;
+      }
+    }
+    .hero_content {
+      padding: 1.25rem 0.938rem;
+      text-align: center;
+      @include content-gap();
+      position: relative;
+      background: #ecb9c0;
+      @include media(">=md") {
+        width: 60%;
+        background: transparent;
+        padding: 6rem 3rem;
+      }
+
+      h1 {
+        font-size: 4rem;
+        font-size: clamp(1.75rem, 5vw, 4.5rem);
+        @include margin(top, 0.5);
+        color: color(accent);
+      }
+      h5 {
+        font-size: 1.5rem;
+        font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+        font-weight: weight(light);
+      }
+      p {
+        font-size: 1.25rem;
+        font-size: clamp(1rem, 2vw, 1.5rem);
+        color: color(accent);
+      }
+
+      .polygon-path {
+        display: block;
+        -webkit-clip-path: polygon(100% 0%, 0 50%, 100% 50%);
+        clip-path: polygon(100% 0%, 0 50%, 100% 50%);
+        background-color: #ecb9c0;
+        height: 6rem;
+        position: absolute;
+        transform: translateY(-50%);
+        top: 1px;
+        left: 0;
+        right: 0;
+        @include media(">=md") {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+/*....work section
+...........................*/
+.affiliate_work {
+  padding: 3.5rem 0;
+  background: bg("affiliate-blob_bg.png") no-repeat bottom center;
+  background-size: cover;
+  @include media(">=md") {
+    padding: 6rem 0;
+  }
+
+  &_wrap {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 2rem;
+    @include media(">=md") {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    & > * {
+      @include content-gap();
+      position: relative;
+      text-align: center;
+      @include media(">=md") {
+        text-align: left;
+
+        &.order1 {
+          order: 1;
+        }
+      }
+    }
+
+    ul {
+      @include margin(top, 4.375);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+
+      li {
+        flex: 0 0 25%;
+        @include margin(bottom, 1.25);
+        text-align: center;
+        img {
+          max-width: 4rem;
+          @include media(">=sm") {
+            max-width: 5.375rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*....benefit section
+...........................*/
+.section_benefit {
+  padding: 3.75rem 0 2rem;
+
+  &_wrap {
+    @include margin(top, 4);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 3rem 2rem;
+    text-align: center;
+    @include media(">=md") {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .img_box {
+      text-align: center;
+      @include margin(bottom, 1.25);
+      span {
+        background: color(clr-shade3);
+        @include size(6.25rem);
+        @include bd-radius(50%);
+        @include m-auto();
+        position: relative;
+        display: grid;
+        place-items: center;
+      }
+    }
+  }
+}
+
+/*....content section
+...........................*/
+.affiliate_content {
+  padding: 3.75rem 0 2rem;
+}
+
+/*....img-box section
+...........................*/
+.affiliate_box {
+  .content_box {
+    .content_text {
+      padding: 2rem 0.938rem;
+      text-align: center;
+      @include media(">=sm") {
+        text-align: left;
+      }
+      h5 {
+        font-weight: weight(light);
+        width: 100%;
+      }
+      .btn {
+        width: auto;
+        margin: 2rem auto 0;
+        @include media(">=sm") {
+          margin: 2rem 0 0;
+        }
+      }
+      .check_list {
+        li {
+          text-align: left;
+        }
+      }
+    }
+  }
+}

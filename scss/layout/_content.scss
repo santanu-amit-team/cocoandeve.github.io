@@ -2,9 +2,6 @@
 ...........................*/
 .section_content {
   @include content-gap();
-  .container {
-    @include content-gap();
-  }
 
   &_wrap {
     @include content-gap(1.5);

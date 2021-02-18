@@ -1,6 +1,7 @@
 // Color theme
 
 $primary: #f4436c !default;
+$primary-light-500: #feb1be !default;
 $primary-light: #f5dadf !default;
 $primary-lighter: #fff9f9 !default;
 $secondary: #00635b !default;
@@ -36,10 +37,12 @@ $clr-shade1: #00b67a !default;
 $clr-shade1-light: #e0f0e9 !default;
 $clr-shade2: #f9eeca !default;
 $clr-shade2-light: #f9eeca !default;
+$clr-shade3: #e4f5f1 !default;
 
 //user changes theme colors:
 $color: (
   primary: $primary,
+  primary-light-500: $primary-light-500,
   primary-light: $primary-light,
   primary-lighter: $primary-lighter,
   secondary: $secondary,
@@ -67,6 +70,7 @@ $color: (
   clr-shade1-light: $clr-shade1-light,
   clr-shade2: $clr-shade2,
   clr-shade2-light: $clr-shade2-light,
+  clr-shade3: $clr-shade3,
 ) !default;
 
 // font-family

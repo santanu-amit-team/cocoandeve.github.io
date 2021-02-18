@@ -7331,6 +7331,10 @@ h3 {
   font-size: 2rem;
   font-size: clamp(1.5rem, 3vw, 2rem); }
 
+h5 {
+  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 2.5vw, 1.5rem); }
+
 h6 {
   font-size: 1.125rem; }
 
@@ -7928,6 +7932,10 @@ hr {
   background-color: #f5dadf;
   color: #000; }
 
+.bg-primary-light-500 {
+  background-color: #feb1be;
+  color: #000; }
+
 .bg-secondary {
   background-color: #00635b;
   color: #f8f9fa; }
@@ -7938,6 +7946,10 @@ hr {
 
 .bg-light-shade2 {
   background-color: #f9eeca;
+  color: #000; }
+
+.bg-shade3 {
+  background-color: #e4f5f1;
   color: #000; }
 
 /*.....scroll to top
@@ -8503,9 +8515,6 @@ hr {
 /*....content section
 ...........................*/
 .section_content > * + * {
-  margin-top: 1em; }
-
-.section_content .container > * + * {
   margin-top: 1em; }
 
 .section_content_wrap {
@@ -9944,6 +9953,174 @@ hr {
         text-decoration: underline; }
         .section_boximg_wrap .boximg_content a:hover {
           color: #f4436c; }
+
+/*....hero section
+...........................*/
+@media (min-width: 768px) {
+  .affiliate_hero {
+    background: url("../images/affiliate-banner.jpg") no-repeat;
+    background-position: -150px bottom;
+    background-size: cover;
+    background-color: #dba0a6; } }
+
+@media (min-width: 1200px) {
+  .affiliate_hero {
+    background-position: left bottom; } }
+
+.affiliate_hero .container {
+  padding: 0; }
+  @media (min-width: 768px) {
+    .affiliate_hero .container {
+      padding: 0 0.938rem; } }
+
+@media (min-width: 768px) {
+  .affiliate_hero_wrap {
+    display: flex;
+    justify-content: flex-end; } }
+
+.affiliate_hero_wrap .hero_img {
+  background: #ecb9c0; }
+  @media (min-width: 768px) {
+    .affiliate_hero_wrap .hero_img {
+      display: none; } }
+
+.affiliate_hero_wrap .hero_content {
+  padding: 1.25rem 0.938rem;
+  text-align: center;
+  position: relative;
+  background: #ecb9c0; }
+  .affiliate_hero_wrap .hero_content > * + * {
+    margin-top: 1em; }
+  @media (min-width: 768px) {
+    .affiliate_hero_wrap .hero_content {
+      width: 60%;
+      background: transparent;
+      padding: 6rem 3rem; } }
+  .affiliate_hero_wrap .hero_content h1 {
+    font-size: 4rem;
+    font-size: clamp(1.75rem, 5vw, 4.5rem);
+    margin-top: 0.5em;
+    color: #333; }
+  .affiliate_hero_wrap .hero_content h5 {
+    font-size: 1.5rem;
+    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+    font-weight: 300; }
+  .affiliate_hero_wrap .hero_content p {
+    font-size: 1.25rem;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    color: #333; }
+  .affiliate_hero_wrap .hero_content .polygon-path {
+    display: block;
+    -webkit-clip-path: polygon(100% 0%, 0 50%, 100% 50%);
+    clip-path: polygon(100% 0%, 0 50%, 100% 50%);
+    background-color: #ecb9c0;
+    height: 6rem;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 1px;
+    left: 0;
+    right: 0; }
+    @media (min-width: 768px) {
+      .affiliate_hero_wrap .hero_content .polygon-path {
+        display: none; } }
+
+/*....work section
+...........................*/
+.affiliate_work {
+  padding: 3.5rem 0;
+  background: url("../images/affiliate-blob_bg.png") no-repeat bottom center;
+  background-size: cover; }
+  @media (min-width: 768px) {
+    .affiliate_work {
+      padding: 6rem 0; } }
+  .affiliate_work_wrap {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 2rem; }
+    @media (min-width: 768px) {
+      .affiliate_work_wrap {
+        grid-template-columns: repeat(2, 1fr); } }
+    .affiliate_work_wrap > * {
+      position: relative;
+      text-align: center; }
+      .affiliate_work_wrap > * > * + * {
+        margin-top: 1em; }
+      @media (min-width: 768px) {
+        .affiliate_work_wrap > * {
+          text-align: left; }
+          .affiliate_work_wrap > *.order1 {
+            order: 1; } }
+    .affiliate_work_wrap ul {
+      margin-top: 4.375em;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center; }
+      .affiliate_work_wrap ul li {
+        flex: 0 0 25%;
+        margin-bottom: 1.25em;
+        text-align: center; }
+        .affiliate_work_wrap ul li img {
+          max-width: 4rem; }
+          @media (min-width: 576px) {
+            .affiliate_work_wrap ul li img {
+              max-width: 5.375rem; } }
+
+/*....benefit section
+...........................*/
+.section_benefit {
+  padding: 3.75rem 0 2rem; }
+  .section_benefit_wrap {
+    margin-top: 4em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 3rem 2rem;
+    text-align: center; }
+    @media (min-width: 768px) {
+      .section_benefit_wrap {
+        grid-template-columns: repeat(3, 1fr); } }
+    .section_benefit_wrap .img_box {
+      text-align: center;
+      margin-bottom: 1.25em; }
+      .section_benefit_wrap .img_box span {
+        background: #e4f5f1;
+        width: 6.25rem;
+        height: 6.25rem;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -o-border-radius: 50%;
+        border-radius: 50%;
+        margin: 0 auto;
+        position: relative;
+        display: grid;
+        place-items: center; }
+
+/*....content section
+...........................*/
+.affiliate_content {
+  padding: 3.75rem 0 2rem; }
+
+/*....img-box section
+...........................*/
+.affiliate_box .content_box .content_text {
+  padding: 2rem 0.938rem;
+  text-align: center; }
+  @media (min-width: 576px) {
+    .affiliate_box .content_box .content_text {
+      text-align: left; } }
+  .affiliate_box .content_box .content_text h5 {
+    font-weight: 300;
+    width: 100%; }
+  .affiliate_box .content_box .content_text .btn {
+    width: auto;
+    margin: 2rem auto 0; }
+    @media (min-width: 576px) {
+      .affiliate_box .content_box .content_text .btn {
+        margin: 2rem 0 0; } }
+  .affiliate_box .content_box .content_text .check_list li {
+    text-align: left; }
 
 @media (max-width: 767px) {
   .section_Companies,
