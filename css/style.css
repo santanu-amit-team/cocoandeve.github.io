@@ -7866,7 +7866,7 @@ li ul {
   box-sizing: border-box; }
   @media (min-width: 992px) {
     .container {
-      width: 73.125rem; } }
+      width: 76.875rem; } }
 
 .container-sm {
   width: 100%;
@@ -8591,7 +8591,7 @@ hr {
   margin-bottom: 3em; }
   .tab_list ul.tabs {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-gap: 0;
     justify-content: center;
@@ -8601,6 +8601,9 @@ hr {
     -moz-border-radius: 0.25rem;
     -o-border-radius: 0.25rem;
     border-radius: 0.25rem; }
+    @media (min-width: 768px) {
+      .tab_list ul.tabs {
+        grid-template-columns: repeat(4, 1fr); } }
     .tab_list ul.tabs.tabs2 {
       display: none; }
       @media (min-width: 576px) {
@@ -9467,8 +9470,7 @@ hr {
       display: none; }
       @media (min-width: 992px) {
         .prod_details_wrap .img_box {
-          width: 60%;
-          padding-right: 2rem;
+          width: 57%;
           padding-bottom: 0;
           display: block; } }
       .prod_details_wrap .img_box img {
@@ -9477,7 +9479,8 @@ hr {
       width: 100%; }
       @media (min-width: 992px) {
         .prod_details_wrap .content_box {
-          width: 40%; } }
+          width: 43%;
+          padding-left: 1.875rem; } }
       .prod_details_wrap .content_box > * + * {
         margin-top: 1em; }
       .prod_details_wrap .content_box h2 {
@@ -9657,19 +9660,20 @@ hr {
   float: left; }
 
 .prod-slider .slider.slider-nav {
-  height: 610px;
+  height: 600px;
   overflow: hidden; }
 
 .slider-banner-image {
-  height: 610px; }
+  height: 600px;
+  padding: 0; }
 
 .prod-slider .slider.slider-nav {
   padding: 20px 0 0; }
 
 .slider-nav .slick-slide.thumbnail-image .thumbImg {
-  max-width: 178px;
-  height: 110px;
-  margin: 0 auto;
+  width: 5.5rem;
+  height: 5.5rem;
+  margin: 0.813rem 0;
   border: 1px solid #ebebeb; }
 
 .slider-banner-image img,
@@ -9686,16 +9690,16 @@ hr {
   outline: 0; }
 
 .slider-nav .slick-slide.slick-current.thumbnail-image .thumbImg {
-  border: 2px solid #196db6; }
+  border: 2px solid #f4436c; }
 
 .slider-nav .slick-slide.slick-current span {
-  color: #196db6; }
+  color: #f4436c; }
 
 .slider-nav .slick-slide {
   text-align: center; }
 
 .slider-nav .slick-slide span {
-  font-size: 14px;
+  font-size: 1rem;
   display: block;
   padding: 5px 0 15px; }
 

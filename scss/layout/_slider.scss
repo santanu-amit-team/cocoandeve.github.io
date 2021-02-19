@@ -7,13 +7,16 @@
 
   ul.tabs {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-gap: 0;
     justify-content: center;
     align-items: center;
     border: 1px solid color(accent);
     @include bd-radius(0.25rem);
+    @include media(">=md") {
+      grid-template-columns: repeat(4, 1fr);
+    }
 
     &.tabs2 {
       display: none;
