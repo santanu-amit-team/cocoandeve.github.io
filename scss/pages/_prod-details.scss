@@ -289,10 +289,10 @@
 /*..... prod-details slider start
 .................................*/
 .prod-slider .slider.slider-for {
-  max-width: 80%;
+  max-width: 83%;
 }
 .prod-slider .slider.slider-nav {
-  max-width: 20%;
+  max-width: 17%;
 }
 .prod-slider .slider.slider-for,
 .prod-slider .slider.slider-nav {
@@ -310,8 +310,11 @@
 .prod-slider .slider.slider-nav {
   padding: 20px 0 0;
 }
+.slider-nav .slick-slide.thumbnail-image {
+  padding: 0 0.938rem 0 0;
+}
 .slider-nav .slick-slide.thumbnail-image .thumbImg {
-  @include size(5.5rem);
+  @include size(100%);
   margin: 0.813rem 0;
   border: 1px solid #ebebeb;
 }
