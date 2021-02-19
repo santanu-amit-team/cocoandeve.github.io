@@ -112,7 +112,7 @@
         align-items: center;
 
         li + li {
-          @include padding(left, 1);
+          @include padding(left, 0.75);
         }
         &.menu-desktop {
           display: flex;

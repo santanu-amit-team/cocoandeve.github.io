@@ -229,6 +229,53 @@ $('.center4').slick({
   ]
 });
 
+/*Center Mode-5*/
+$('.center5').slick({
+  dots: false,
+  arrows: true,
+  centerMode: false,
+  centerPadding: '0',
+  slidesToShow: 5,
+  responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        arrows: true,
+        centerMode: true,
+        centerPadding: '90px',
+        slidesToShow: 4
+      }
+    },
+    {
+      breakpoint: 992,
+      settings: {
+        arrows: true,
+        centerMode: true,
+        centerPadding: '90px',
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: true,
+        centerMode: true,
+        centerPadding: '60px',
+        slidesToShow: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: true,
+        centerMode: true,
+        centerPadding: '30px',
+        slidesToShow: 1
+      }
+    }
+  ]
+});
+
 
 //tab script start
 // tab-1
