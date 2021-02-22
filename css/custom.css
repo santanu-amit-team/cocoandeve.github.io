@@ -8074,7 +8074,7 @@ hr {
         display: block;
         margin: 0;
         width: 100%;
-        font-size: 1.25rem;
+        font-size: 1.20rem;
         line-height: 1.2; }
         @media (min-width: 992px) {
           .header .header_wrap .menu .menu-item {
@@ -10362,3 +10362,434 @@ hr {
 @media (max-width: 575px) {
   .hideSml {
     display: none; } }
+
+
+/* ========= FAQ Css =========*/
+.faq-bnr{
+  width: 100%; background: url(../images/faq-banner.jpg) top center no-repeat; background-size: cover; padding: 10% 0;
+}
+.hero-inner {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+.hero-inner h3 {
+    font-size: 4.5rem;
+    color: #fff;
+    margin-bottom: 0;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.search {
+    position: relative;
+}
+.search::before {
+    content: " ";
+    width: 22px;
+    height: 22px;
+    background-image: url(../images/search-icon.svg);
+    height: 60px;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    color: #212529;
+    font-size: 18px;
+    position: absolute;
+    right: 35px;
+}
+.search-full input[type="search"] {
+    border: 1px solid #fff;
+}
+.search input[type="search"] {
+    border: none;
+    box-sizing: border-box;
+    color: #212529;
+    height: 60px;
+    padding: 22px 32px;
+    line-height: 26px;
+    -webkit-appearance: none;
+    width: 100%;
+    border-radius: 8px;
+}
+.section-container {
+    display: flex;
+    justify-content: flex-end;
+}
+.faq-cat-title {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0;
+    margin-bottom: 15px;
+    font-weight: 600;
+    display: block;
+}
+.section-right-bar {
+    margin-bottom: 10px;
+}
+.mobile-selected-menu {
+    max-width: 100%;
+    max-height: 50px;
+    padding: 12px 25px 12px 53px;
+    overflow: hidden;
+    height: 50px;
+    position: relative;
+    border-radius: 4px;
+    background: #fff;
+    border: 1px solid #000;
+    width: 100%;
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #000;
+    display: none;
+    font-size: 16px;
+
+}
+.inner-sidebar {
+    width: 100%;
+    display: inline-block;
+    max-width: 270px;
+    background-color: #f1f1f1;
+    padding: 0px 30px;
+    border-radius: 4px;
+    background: #fff;
+    border: 1px solid #000;
+    display: block;
+}
+.inner-sidebar ul.widget-list {
+    width: 100%;
+    display: inline-block;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.inner-sidebar ul.widget-list li.list-header {
+    border-bottom: 1px solid #E5E5E5;
+}
+.inner-sidebar ul.widget-list li.list-header:before {
+    background-image: url(../images/Icon_feather-home.svg);
+}
+.inner-sidebar ul.widget-list li:before {
+    content: " ";
+    background-image: url(../images/Icon-feather-folder.svg);
+    position: absolute;
+    display: inline-block;
+    width: 27px;
+    height: 27px;
+    background-position-y: center;
+    background-repeat: no-repeat;
+}
+.inner-sidebar ul.widget-list li a {
+    font-weight: normal;
+    color: #000;
+    margin-left: 30px;
+    font-size: 16px;
+}
+.widget-list li{padding: 10px 0;}
+.widget-list li:first-child{padding: 6px 0;}
+
+.inner-sidebar ul.widget-list li a.selected {
+    font-weight: 600;
+
+}
+
+
+.content-title {
+    position: relative;
+    margin-top: 25px;
+}
+.content-title h2 {
+    text-align: center;
+    margin-bottom: 0;
+    text-align: left;
+    font-size: 32px;
+    line-height: 38px;
+    border-bottom: 1px solid #000;
+    padding-bottom: 12px;
+    padding-left: 40px;
+}
+.content-title h2:before {
+    content: " ";
+    background-image: url(../images/Icon-feather-folder.svg);
+    position: absolute;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 0;
+    left: 0;
+    background-size: 25px;
+}
+
+
+.faq-area{
+  width: 100%;
+}
+.faq-area-top{
+  width: 100%;
+  border-bottom: 1px solid #000;
+  position: relative;
+}
+
+.faq-area-top h2{
+    text-align: left;
+    font-size: 32px;
+    line-height: 38px;
+    padding-bottom: 12px;
+    padding-left: 40px;
+}
+
+.faq-area-top h2:before {
+    content: " ";
+    background-image: url(../images/Icon-feather-folder.svg);
+    position: absolute;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 0;
+    left: 0;
+    background-size: 25px;
+}
+
+.faq-area{
+  width: 100%;
+}
+
+.top-see-all {
+   font-size: 16px;
+    border: 2px solid #f4436c;
+    border-radius: 6px;
+    padding: 8px 25px;
+    text-decoration: none;
+    font-weight: 600;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #f4436c;
+}
+
+.top-see-all:hover{
+  color: #f4436c;
+  text-decoration: underline;
+}
+
+
+.faq-accurian{
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.accordion_wrap {
+  width: 100%;
+}
+.accordion_box {
+  width: 100%;
+  padding: 30px 0px 0px;
+}
+.accordion_box ul {
+    margin: 0px auto;
+}
+.accordion_box ul li {
+  width: 100%;
+  margin-bottom: 10px;
+}
+li.slide_box h3 {
+    color: #000000;
+    font-size: 1.25rem;
+    line-height: 1.3;
+    font-weight: 700;
+    border: none;
+    background: transparent;
+    text-align: left;
+    padding: 12px 0;
+    cursor: pointer;
+    position: relative;
+}
+li.slide_box h3 a{
+ color: #000000;
+ text-decoration: none;
+}
+li.slide_box h3 a:hover{
+ color: #000000;
+ text-decoration: underline;
+}
+li.slide_box h3:after {
+    content: "\f067";
+    color: #000000;
+    font-weight: lighter;
+    float: right;
+    font-size: 28px;
+    line-height: 22px;
+    font-family: 'FontAwesome';
+
+}
+li.active h3:after {
+    content: "\f068";
+    font-family: 'FontAwesome';
+}
+p.hide_box {
+    color: #000000;
+    font-size: 22px;
+    line-height: 30px;
+    padding: 0px 20px 20px 50px;
+    margin: 0px;
+}
+p.hide_box a {
+    color: #f4436c;
+    text-decoration: underline;
+}
+p.hide_box a:hover {
+    color: #f4436c;
+    text-decoration: none;
+}
+.see-btn{
+  width: 100%;
+  text-align: center;
+}
+
+.see-btn a{
+    text-align: center;
+    font-size: 1.25rem;
+    color: #f4436c;
+    text-decoration: underline;
+}
+.see-btn a:hover{
+   
+    color: #f4436c;
+    text-decoration: none;
+}
+
+.faq-tab-nav{
+  display: none;
+}
+
+.pos-rel{
+  position: relative;
+}
+
+.new-btn{
+  background: #ffffff;
+  border: 1px solid #000;
+  padding: 10px 10px 10px 30px;
+  margin-bottom: 15px;
+  font-weight: 600;
+    color: #000!important;
+    font-size: 16px;
+    width: 100%;
+    text-decoration: none;
+    border-radius: 4px;
+}
+.new-btn:before {
+    content: " ";
+    background-image: url(../images/Icon-feather-folder.svg);
+    position: absolute;
+    display: inline-block;
+    width: 27px;
+    height: 27px;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    margin-left: -23px;
+}
+.new-btn::after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: .255em;
+    vertical-align: .255em;
+    content: "";
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
+    position: absolute;
+    right: 12px;
+    top: 24px;
+}
+.new-menu
+{
+  background: #ffffff!important;
+  border: 1px solid #000!important;
+  padding: 10px!important;
+   font-weight: 600!important;
+    color: #000!important;
+    font-size: 16px!important;
+    max-width: 100%!important;
+    transform:inherit!important;
+    top: 55px!important;
+    min-width: initial!important;
+    width: 100%;
+
+}
+.new-nav1{
+  padding: 10px 5px 10px 30px!important;
+  white-space:inherit!important;
+}
+
+
+.new-nav1:before {
+    content: " ";
+    background-image: url(../images/Icon-feather-folder.svg);
+    position: absolute;
+    display: inline-block;
+    width: 27px;
+    height: 27px;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    left: 8px;
+}
+.home-icn:before {
+        background-image: url(../images/Icon_feather-home.svg);
+}
+.bdr-bot{
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 50px;
+}
+
+
+
+@media screen and (max-width: 991px){
+
+.inner-sidebar{
+  display: none;
+}
+
+
+.faq-tab-nav{
+  display: block;
+}
+
+.top-see-all{
+  position: relative;
+  margin-bottom: 15px;
+}
+li.slide_box h3{
+  font-size: 19px;
+}
+
+}
+
+@media screen and (max-width: 767px){
+.new-btn{
+  padding: 10px 10px 10px 42px;
+}
+.new-nav1:before{
+  left: 19px;
+}
+.new-menu{
+  padding: 10px 20px!important;
+}
+
+}
+
+
+
+
+
+
+/* ========= FAQ Css =========*/
