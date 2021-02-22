@@ -408,3 +408,19 @@ $(".slider-nav").slick({
   ]
 });
 
+// accordian script
+$(".hide_box").hide();
+
+$(document).on('click', '.slide_box', function(){
+ $(this).find('.hide_box').slideToggle();
+ if($(this).hasClass('active'))
+ {
+ 	console.log("yes");
+ 	$(this).removeClass('active');
+ }
+ else {
+ 	$(this).siblings().removeClass("active");
+ 	$(this).addClass("active");
+ }
+ $(this).siblings().find('.hide_box').slideUp();
+});
