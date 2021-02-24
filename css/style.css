@@ -13901,8 +13901,15 @@ li.active h3:after {
   text-align: center;
   position: fixed;
   bottom: 0;
+  display: none;
 }
 .mob-add-btn a{
   font-size: 18px; color: #ffffff;
+}
+
+@media (max-width: 767px) {
+.mob-add-btn{
+  display: block;
+}
 }
 /* ====== Changes 24-02-2021 ======*/
