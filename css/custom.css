@@ -10622,16 +10622,16 @@ li.slide_box h3 a:hover{
 li.slide_box h3:after {
     content: "\f067";
     color: #000000;
-    font-weight: lighter;
+    font-weight: bolder;
     float: right;
-    font-size: 28px;
+    font-size: 18px;
     line-height: 22px;
-    font-family: 'FontAwesome';
+    font-family: 'Font Awesome 5 Free';
 
 }
 li.active h3:after {
     content: "\f068";
-    font-family: 'FontAwesome';
+    font-family: 'Font Awesome 5 Free';
 }
 p.hide_box {
     color: #000000;
