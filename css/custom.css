@@ -9460,7 +9460,7 @@ hr {
     top: 50% !important; }
 
 .prod_details {
-  padding: 2rem 0; }
+  padding: 2rem 0; margin-top: 30px;}
   .prod_details_wrap {
     display: flex;
     flex-wrap: wrap; }
