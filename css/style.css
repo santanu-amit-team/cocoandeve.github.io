@@ -13877,3 +13877,23 @@ li.active h3:after {
     display: none;
   }
 }
+
+
+/* ====== Changes 24-02-2021 ======*/
+.header-fixed{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 1px 1px 5px #4d4d4d;
+    -moz-box-shadow: 1px 1px 5px #4d4d4d;
+    -webkit-box-shadow: 1px 1px 5px #4d4d4d;
+    -ms-box-shadow: 1px 1px 5px #4d4d4d;
+}
+
+.product-fixed-box{
+  position: fixed;
+}
+
+
+/* ====== Changes 24-02-2021 ======*/
