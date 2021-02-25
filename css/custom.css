@@ -9460,7 +9460,7 @@ hr {
     top: 50% !important; }
 
 .prod_details {
-  padding: 2rem 0; margin-top: 65px;}
+  padding: 2rem 0; margin-top: 30px;}
   .prod_details_wrap {
     display: flex;
     flex-wrap: wrap; }
@@ -10944,7 +10944,7 @@ li.slide_box h3{
 /* ========= FAQ Css =========*/
 
 
-/*.smart-scroll{
+.smart-scroll{
   position: fixed;
   top: 0;
   right: 0;
@@ -10956,18 +10956,6 @@ li.slide_box h3{
    transform:translateY(-100%); transition: all 0.3s ease-in-out;
 
 
-}*/
-.smart-scroll {
-position: fixed;
-top: 44px;
-right: 0;
-left: 0;
-z-index: 1030;
-background-color: #FFF;
-}
-.scrolled-down {
-transform: translateY(-170%);
-transition: all 0.3s ease-in-out;
 }
 .scrolled-up{
    transform:translateY(0); transition: all 0.3s ease-in-out;

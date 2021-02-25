@@ -441,10 +441,10 @@ if ($('.smart-scroll').length > 0) { // check if element exists
             $('.smart-scroll').removeClass('scrolled-up').addClass('scrolled-down');
         }
         last_scroll_top = scroll_top;
-        // if ($('.smart-scroll').length == 1) { 
-        //   //console.log($('.smart-scroll').length);
-        //   $('.smart-scroll').removeClass('scrolled-up');
-        // }
+        if ($('.smart-scroll').length == 1) { 
+          //console.log($('.smart-scroll').length);
+          $('.smart-scroll').removeClass('scrolled-up');
+        }
     });
 }
 
