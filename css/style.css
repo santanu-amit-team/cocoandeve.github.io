@@ -13894,7 +13894,7 @@ li.active h3:after {
 .product-fixed-box{
   position: fixed;
 }
-.mob-add-btn{
+/*.mob-add-btn{
   width: 100%;
   background: #f4436c;
   padding: 15px 0;
@@ -13910,6 +13910,25 @@ li.active h3:after {
 @media (max-width: 767px) {
 .mob-add-btn{
   display: block;
+}
+}*/
+.mob-add-btn{
+  display: none;
+}
+
+@media (max-width: 767px) {
+
+.mob-add-btn{
+  width: 100%;
+  background: #f4436c;
+  padding: 15px 0;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+/*  display: none;
+*/}
+.mob-add-btn a{
+  font-size: 18px; color: #ffffff;
 }
 }
 /* ====== Changes 24-02-2021 ======*/

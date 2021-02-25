@@ -444,3 +444,11 @@ if ($('.smart-scroll').length > 0) { // check if element exists
     });
 }
 
+$(document).scroll(function() {
+  var y = $(this).scrollTop();
+  if (y < 1000 && y > 300) {
+    $('.mob-add-btn').hide();
+  } else {
+    $('.mob-add-btn').show();
+  }
+});
