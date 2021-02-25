@@ -444,6 +444,8 @@ if ($('.smart-scroll').length > 0) { // check if element exists
         if ($('.smart-scroll').length == 1) { 
           //console.log($('.smart-scroll').length);
           $('.smart-scroll').removeClass('scrolled-up');
+          // $('.header').removeClass('smart-scroll');
+
         }
     });
 }
