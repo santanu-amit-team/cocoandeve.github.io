@@ -430,25 +430,45 @@ $(document).on('click', '.slide_box', function(){
 $('body').css('padding-top', $('.navbar').outerHeight() + 'px')
 
 // detect scroll top or down
-if ($('.smart-scroll').length > 0) { // check if element exists
-    var last_scroll_top = 0;
-    $(window).on('scroll', function() {
-        scroll_top = $(this).scrollTop();
-        if(scroll_top < last_scroll_top) {
-            $('.smart-scroll').removeClass('scrolled-down').addClass('scrolled-up');
-        }
-        else {
-            $('.smart-scroll').removeClass('scrolled-up').addClass('scrolled-down');
-        }
-        last_scroll_top = scroll_top;
-        if ($('.smart-scroll').length == 1) { 
-          //console.log($('.smart-scroll').length);
-          $('.smart-scroll').removeClass('scrolled-up');
-          // $('.header').removeClass('smart-scroll');
+// if ($('.smart-scroll').length > 0) { // check if element exists
+//     var last_scroll_top = 0;
+//     $(window).on('scroll', function() {
+//         scroll_top = $(this).scrollTop();
+//         if(scroll_top < last_scroll_top) {
+//             $('.smart-scroll').removeClass('scrolled-down').addClass('scrolled-up');
+//         }
+//         else {
+//             $('.smart-scroll').removeClass('scrolled-up').addClass('scrolled-down');
+//         }
+//         last_scroll_top = scroll_top;
+//         if ($('.smart-scroll').length == 1) { 
+//           //console.log($('.smart-scroll').length);
+//           $('.smart-scroll').removeClass('scrolled-up');
+//           // $('.header').removeClass('smart-scroll');
+
+//         }
+//     });
+// }
+
+$(function() {
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop() + 50;
+        var currentArea = $("section").filter(function() {
+          return scroll <= $(this).offset().top + $(this).height();
+        });
+    
+        $(".nav a").removeClass("selected");
+        $(".nav a[href=#" + currentArea.attr("id") + "]").addClass("selected");
+    
+        if ($(window).scrollTop() > 70) {
+            $('.header').addClass("hed_sticky");
+
+        } else if ($(window).scrollTop() < 100 ) {
+            $('.header').removeClass("hed_sticky");
 
         }
     });
-}
+});
 
 /*btn*/
 $(document).scroll(function() {
