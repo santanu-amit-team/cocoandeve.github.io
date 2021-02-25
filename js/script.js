@@ -425,7 +425,7 @@ $(document).on('click', '.slide_box', function(){
  $(this).siblings().find('.hide_box').slideUp();
 });
 
-
+/*header*/
 // add padding top to show content behind navbar
 $('body').css('padding-top', $('.navbar').outerHeight() + 'px')
 
@@ -441,9 +441,14 @@ if ($('.smart-scroll').length > 0) { // check if element exists
             $('.smart-scroll').removeClass('scrolled-up').addClass('scrolled-down');
         }
         last_scroll_top = scroll_top;
+        if ($('.smart-scroll').length == 1) { 
+          console.log($('.smart-scroll').length);
+          $('.smart-scroll').removeClass('scrolled-up');
+        }
     });
 }
 
+/*btn*/
 $(document).scroll(function() {
   var y = $(this).scrollTop();
   if (y < 1000 && y > 300) {
@@ -452,3 +457,4 @@ $(document).scroll(function() {
     $('.mob-add-btn').show();
   }
 });
+

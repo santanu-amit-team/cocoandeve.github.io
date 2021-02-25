@@ -10952,13 +10952,23 @@ li.slide_box h3{
   z-index: 1030;
   background-color: #FFF;
 }
-.scrolled-down{
+  .scrolled-down{
    transform:translateY(-100%); transition: all 0.3s ease-in-out;
 
-}
 
+}
 .scrolled-up{
    transform:translateY(0); transition: all 0.3s ease-in-out;
    box-shadow: 0px 4px 5px 0px rgb(0 0 0 / 6%);
 }
 
+.fixboxwrap{
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.fixbox{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 40px;
+}
