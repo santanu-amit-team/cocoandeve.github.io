@@ -8997,7 +8997,7 @@ hr {
     background-size: 1rem !important;
     border: 0 !important;
     color: #fff !important;
-    font-size: 1.5rem !important;
+    font-size: 22px !important;
     background: url("../images/caret-down.svg") no-repeat 95% !important;
     background-size: 1rem !important; }
     .section_footer_wrap > * .currency option {
@@ -10980,6 +10980,7 @@ li.slide_box h3{
   position: sticky;
   top: 40px;
 }
+
 /*cart open close*/
 
 
@@ -11017,3 +11018,47 @@ position: fixed;
 }
 
 /*cart open close*/
+
+
+.bg-secondary1 {
+    background-color: #00635b!important;
+    color: #f8f9fa;
+}
+
+.btn-primary1 {
+    width: auto;
+    display: inline-block;
+    font-size: 1.25rem;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-weight: 700;
+    padding: 0.75em 1em;
+    text-align: center;
+    box-shadow: none;
+    border: 2px solid transparent;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    border-radius: 0.5rem;
+    width: 230px;
+    max-width: 100%;
+}
+.sucb-new-btn {
+    font-size: 1rem;
+    padding: 0.85rem 1rem;
+    text-transform: uppercase;
+    background-color: #f4436c;
+    width: 100%;
+    border-radius: 0 4px 4px 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.sucb-new-btn:hover{
+  background-color: #f11346;
+    color: #f8f9fa!important;
+    border-color: #f11346;
+    text-decoration: none!important;
+}
+
