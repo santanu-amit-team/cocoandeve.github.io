@@ -8300,7 +8300,7 @@ hr {
     max-width: 120px !important;
     transition: ease 0.5s; }
 
-.sidebar {
+/*.sidebar {
   height: 100%;
   width: 0;
   position: fixed;
@@ -8313,7 +8313,7 @@ hr {
   transition: all 1s ease-in-out;
   -webkit-transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out; }
+  -o-transition: all 1s ease-in-out; }*/
   .sidebar .sidebar_wrap {
     position: relative; }
   .sidebar .side_box {
@@ -10980,3 +10980,40 @@ li.slide_box h3{
   position: sticky;
   top: 40px;
 }
+/*cart open close*/
+
+
+.sidebar.open-cart {
+transform: translateX(0px);
+-webkit-transform: translateX(0px);
+-o-transform: translateX(0px);
+-ms-transform: translateX(0px);
+-moz-transform: translateX(0px);
+overflow-y: scroll;
+height: 100%;
+position: fixed;
+}
+.sidebar{
+     height: 100%;
+    width: 462px;
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    right: 0;
+    background-color: white;
+    color: #000;
+    overflow-x: hidden;
+    overflow: hidden;
+    transform: translateX(462px);
+    -webkit-transform: translateX(462px);
+    -o-transform: translateX(462px);
+    -ms-transform: translateX(462px);
+    -moz-transform: translateX(462px);
+    transition: 0.3s transform ease-in-out;
+    /*transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;*/
+}
+
+/*cart open close*/

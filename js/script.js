@@ -13,10 +13,14 @@ $(window).bind("load", function () {
 //   document.getElementById("mysidebar").style.width = "0";
 // }
 function openbtn() {
-  $("#mysidebar").css({"width": "460px", "max-width": "100%"});
+  //$("#mysidebar").css({"width": "460px", "max-width": "100%"});
+  $("#mysidebar").addClass('open-cart');
+ 
+
 }
 function closebtn() {
-  $("#mysidebar").css({"width": "0"});
+ // $("#mysidebar").css({"width": "0"});
+   $("#mysidebar").removeClass('open-cart');
 }
 
 //scroll to top script
