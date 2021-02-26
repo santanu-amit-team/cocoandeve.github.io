@@ -10994,27 +10994,15 @@ overflow-y: scroll;
 height: 100%;
 position: fixed;
 }
-.sidebar{
-     height: 100%;
-    width: 462px;
-    position: fixed;
-    z-index: 9;
-    top: 0;
-    right: 0;
-    background-color: white;
-    color: #000;
-    overflow-x: hidden;
-    overflow: hidden;
-    transform: translateX(462px);
-    -webkit-transform: translateX(462px);
-    -o-transform: translateX(462px);
-    -ms-transform: translateX(462px);
-    -moz-transform: translateX(462px);
-    transition: 0.3s transform ease-in-out;
-    /*transition: all 1s ease-in-out;
-    -webkit-transition: all 1s ease-in-out;
-    -moz-transition: all 1s ease-in-out;
-    -o-transition: all 1s ease-in-out;*/
+.sidebar{    
+    width: 460px;
+    max-width: 100%;    
+    transform: translateX(460px);
+    -webkit-transform: translateX(460px);
+    -o-transform: translateX(460px);
+    -ms-transform: translateX(460px);
+    -moz-transform: translateX(460px);
+    transition: 0.3s transform ease-in-out;   
 }
 
 /*cart open close*/

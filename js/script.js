@@ -15,12 +15,14 @@ $(window).bind("load", function () {
 function openbtn() {
   //$("#mysidebar").css({"width": "460px", "max-width": "100%"});
   $("#mysidebar").addClass('open-cart');
+  $("body").addClass('hidden-scrolling');
  
 
 }
 function closebtn() {
  // $("#mysidebar").css({"width": "0"});
    $("#mysidebar").removeClass('open-cart');
+   $("body").removeClass('hidden-scrolling');
 }
 
 //scroll to top script
