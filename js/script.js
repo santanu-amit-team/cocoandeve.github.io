@@ -441,8 +441,8 @@ if ($('.smart-scroll').length > 0) { // check if element exists
             $('.smart-scroll').removeClass('scrolled-up').addClass('scrolled-down');
         }
         last_scroll_top = scroll_top;
-        if (scroll_top < 10) { 
-          $('.smart-scroll').removeClass('scrolled-up');
+        if (scroll_top < 50) { 
+          $('.smart-scroll').removeClass('scrolled-up').removeClass('scrolled-down');
 
         }
     });
